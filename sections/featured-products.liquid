@@ -1,0 +1,235 @@
+<section class="pt-fp">
+  <div class="pt-fp__inner">
+
+    <div class="pt-fp__header">
+      <div>
+        <p class="pt-fp__eye">The first drop</p>
+        <h2 class="pt-fp__title">Four colours. One tee.</h2>
+      </div>
+      <a href="/collections/all" class="pt-fp__viewall">View all →</a>
+    </div>
+
+    <div class="pt-fp__grid">
+      {%- for product in collections['all'].products limit: 4 -%}
+      <div class="pt-fp__card">
+
+        <a href="{{ product.url }}" class="pt-fp__imgwrap">
+          {%- if product.featured_image -%}
+            <img
+              src="{{ product.featured_image | image_url: width: 600 }}"
+              alt="{{ product.featured_image.alt | escape }}"
+              width="600"
+              height="750"
+              loading="lazy"
+            >
+          {%- else -%}
+            <div class="pt-fp__placeholder">
+              <span>Plain Theory</span>
+            </div>
+          {%- endif -%}
+          <span class="pt-fp__badge">New</span>
+          <div class="pt-fp__atc">Quick add — select size</div>
+        </a>
+
+        <p class="pt-fp__name">{{ product.title }}</p>
+        <p class="pt-fp__variant">
+          {%- if product.variants.size > 1 -%}
+            {{ product.variants.first.title }}
+          {%- else -%}
+            {{ product.variants.first.title }}
+          {%- endif -%}
+        </p>
+        <div class="pt-fp__bottom">
+          <span class="pt-fp__price">{{ product.price | money }}</span>
+          <a href="{{ product.url }}" class="pt-fp__shoplink">Shop →</a>
+        </div>
+
+      </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.pt-fp{
+  background:#0F0E0C;
+  padding:72px 48px;
+}
+.pt-fp__inner{
+  max-width:1400px;
+  margin:0 auto;
+}
+.pt-fp__header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:40px;
+}
+.pt-fp__eye{
+  font-size:10px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:#C9A84C;
+  margin-bottom:8px;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__title{
+  font-family:'Playfair Display',serif!important;
+  font-size:32px!important;
+  font-weight:400!important;
+  color:#E8E0D0!important;
+  margin:0!important;
+  letter-spacing:0!important;
+}
+.pt-fp__viewall{
+  font-size:11px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:#6B6155;
+  text-decoration:none;
+  transition:color 0.2s;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__viewall:hover{
+  color:#C9A84C;
+}
+.pt-fp__grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+}
+.pt-fp__card{
+  display:flex;
+  flex-direction:column;
+}
+.pt-fp__imgwrap{
+  display:block;
+  position:relative;
+  height:360px;
+  background:#1e1b17;
+  border-radius:3px;
+  overflow:hidden;
+  margin-bottom:14px;
+  text-decoration:none;
+  transition:background 0.3s;
+}
+.pt-fp__imgwrap:hover{
+  background:#242018;
+}
+.pt-fp__imgwrap img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+  transition:transform 0.5s ease;
+  display:block;
+}
+.pt-fp__imgwrap:hover img{
+  transform:scale(1.03);
+}
+.pt-fp__placeholder{
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pt-fp__placeholder span{
+  font-family:'Playfair Display',serif;
+  font-size:11px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(201,168,76,0.25);
+}
+.pt-fp__badge{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#C9A84C;
+  color:#0F0E0C;
+  font-size:9px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:2px;
+  font-weight:500;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__atc{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  right:12px;
+  background:rgba(15,14,12,0.92);
+  border:1px solid rgba(201,168,76,0.3);
+  color:#C9A84C;
+  padding:11px;
+  font-size:10px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  text-align:center;
+  border-radius:2px;
+  opacity:0;
+  transition:opacity 0.25s;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__imgwrap:hover .pt-fp__atc{
+  opacity:1;
+}
+.pt-fp__name{
+  font-size:13px;
+  color:#E8E0D0;
+  margin:0 0 4px;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__variant{
+  font-size:10px;
+  color:#6B6155;
+  text-transform:uppercase;
+  letter-spacing:0.1em;
+  margin:0 0 10px;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:auto;
+}
+.pt-fp__price{
+  font-size:15px;
+  color:#C9A84C;
+  font-weight:500;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__shoplink{
+  font-size:10px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:#6B6155;
+  text-decoration:none;
+  transition:color 0.2s;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fp__shoplink:hover{
+  color:#C9A84C;
+}
+@media(max-width:900px){
+  .pt-fp__grid{grid-template-columns:repeat(2,1fr)}
+  .pt-fp{padding:48px 24px}
+}
+@media(max-width:540px){
+  .pt-fp__grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .pt-fp__imgwrap{height:220px}
+  .pt-fp__header{flex-direction:column;align-items:flex-start;gap:10px}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Featured products",
+  "settings": [],
+  "presets": [{ "name": "Featured products" }]
+}
+{% endschema %}

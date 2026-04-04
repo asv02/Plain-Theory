@@ -1,0 +1,149 @@
+<section class="pt-rv">
+  <div class="pt-rv__inner">
+
+    <div class="pt-rv__header">
+      <div>
+        <p class="pt-rv__eye">What they said</p>
+        <h2 class="pt-rv__title">Real orders. Real people.</h2>
+      </div>
+      <div class="pt-rv__overall">
+        <span class="pt-rv__stars">★★★★★</span>
+        <span class="pt-rv__score">Verified buyer reviews</span>
+      </div>
+    </div>
+
+    {% render 'judgeme_widgets', widget_type: 'judgeme_all_reviews_widget', concierge_install: true %}
+
+  </div>
+</section>
+
+<style>
+.pt-rv{
+  background:#0F0E0C;
+  padding:80px 48px;
+}
+.pt-rv__inner{
+  max-width:1400px;
+  margin:0 auto;
+}
+.pt-rv__header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:48px;
+}
+.pt-rv__eye{
+  font-size:10px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:#C9A84C;
+  margin-bottom:8px;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-rv__title{
+  font-family:'Playfair Display',serif!important;
+  font-size:32px!important;
+  font-weight:400!important;
+  color:#E8E0D0!important;
+  margin:0!important;
+  letter-spacing:0!important;
+}
+.pt-rv__overall{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
+}
+.pt-rv__stars{
+  color:#C9A84C;
+  font-size:14px;
+  letter-spacing:3px;
+}
+.pt-rv__score{
+  font-size:12px;
+  color:#6B6155;
+  font-family:'DM Sans',sans-serif;
+}
+
+/* Judge.me widget overrides — match Plain Theory dark theme */
+.jdgm-all-reviews-widget,
+.jdgm-widget{
+  background:transparent!important;
+  color:#E8E0D0!important;
+  font-family:'DM Sans',sans-serif!important;
+}
+.jdgm-rev{
+  background:#141210!important;
+  border:1px solid rgba(201,168,76,0.12)!important;
+  border-radius:6px!important;
+  padding:24px!important;
+  margin-bottom:16px!important;
+}
+.jdgm-rev:hover{
+  border-color:rgba(201,168,76,0.28)!important;
+}
+.jdgm-rev__rating .jdgm-star{
+  color:#C9A84C!important;
+}
+.jdgm-rev__author{
+  color:#9C9080!important;
+  font-size:11px!important;
+  text-transform:uppercase!important;
+  letter-spacing:0.1em!important;
+}
+.jdgm-rev__timestamp{
+  color:#4a4540!important;
+  font-size:10px!important;
+}
+.jdgm-rev__body{
+  color:#9C9080!important;
+  font-size:13px!important;
+  line-height:1.8!important;
+  font-style:italic!important;
+}
+.jdgm-rev__title{
+  color:#E8E0D0!important;
+  font-family:'Playfair Display',serif!important;
+  font-weight:400!important;
+}
+.jdgm-paginate__page,
+.jdgm-paginate__arrow{
+  color:#C9A84C!important;
+  border-color:rgba(201,168,76,0.3)!important;
+}
+.jdgm-paginate__page.jdgm-paginate__page--active{
+  background:#C9A84C!important;
+  color:#0F0E0C!important;
+}
+.jdgm-histogram__bar-fill{
+  background:#C9A84C!important;
+}
+.jdgm-summary-stars .jdgm-star{
+  color:#C9A84C!important;
+}
+.jdgm-write-rev-link{
+  color:#C9A84C!important;
+  border:1px solid rgba(201,168,76,0.4)!important;
+  border-radius:2px!important;
+  font-size:11px!important;
+  letter-spacing:0.12em!important;
+  text-transform:uppercase!important;
+}
+.jdgm-write-rev-link:hover{
+  background:#C9A84C!important;
+  color:#0F0E0C!important;
+}
+
+@media(max-width:900px){
+  .pt-rv{padding:56px 24px}
+  .pt-rv__header{flex-direction:column;align-items:flex-start;gap:12px}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Reviews",
+  "settings": [],
+  "presets": [{ "name": "Reviews" }]
+}
+{% endschema %}

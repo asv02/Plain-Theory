@@ -1,0 +1,230 @@
+<section class="pt-fab">
+  <div class="pt-fab__inner">
+
+    <div class="pt-fab__visual">
+      <div class="pt-fab__imgbox">
+        {%- if section.settings.image != blank -%}
+          <img
+            src="{{ section.settings.image | image_url: width: 900 }}"
+            alt="Fabric detail"
+            width="900"
+            loading="lazy"
+          >
+        {%- else -%}
+          <div class="pt-fab__weave">
+            <div class="pt-fab__weave-inner"></div>
+            <div class="pt-fab__weave-label">Fabric texture · 220 GSM</div>
+          </div>
+        {%- endif -%}
+      </div>
+      <div class="pt-fab__gsmbadge">
+        <span class="pt-fab__gsmnum">220</span>
+        <span class="pt-fab__gsmlbl">GSM</span>
+      </div>
+    </div>
+
+    <div class="pt-fab__content">
+      <p class="pt-fab__eye">Why this fabric</p>
+      <h2 class="pt-fab__title">Most tees are<br>160 GSM. Ours is 220.</h2>
+      <p class="pt-fab__sub">The difference is immediate. You feel it before you even put it on. That weight, that drape — it's not a tee you outgrow in two washes.</p>
+
+      <div class="pt-fab__points">
+
+        <div class="pt-fab__point">
+          <span class="pt-fab__num">01</span>
+          <div>
+            <p class="pt-fab__ptitle">220 GSM combed ring-spun cotton</p>
+            <p class="pt-fab__pbody">The weight you feel the moment you pick it up. Dense, structured, and supremely soft.</p>
+          </div>
+        </div>
+
+        <div class="pt-fab__point">
+          <span class="pt-fab__num">02</span>
+          <div>
+            <p class="pt-fab__ptitle">Side-seam construction</p>
+            <p class="pt-fab__pbody">Shaped silhouette. No side-seam twist after washing. Holds its form drop to drop.</p>
+          </div>
+        </div>
+
+        <div class="pt-fab__point">
+          <span class="pt-fab__num">03</span>
+          <div>
+            <p class="pt-fab__ptitle">Pre-shrunk fabric</p>
+            <p class="pt-fab__pbody">What you order is what you get, wash after wash. No surprises in the laundry.</p>
+          </div>
+        </div>
+
+        <div class="pt-fab__point">
+          <span class="pt-fab__num">04</span>
+          <div>
+            <p class="pt-fab__ptitle">Drop shoulder, oversized silhouette</p>
+            <p class="pt-fab__pbody">Designed to drape, not cling. The fit is intentional — generous without being shapeless.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.pt-fab{
+  background:#141210;
+  padding:80px 48px;
+}
+.pt-fab__inner{
+  max-width:1400px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.pt-fab__visual{
+  position:relative;
+}
+.pt-fab__imgbox{
+  height:500px;
+  background:#1e1b17;
+  border-radius:4px;
+  overflow:hidden;
+  position:relative;
+}
+.pt-fab__imgbox img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+.pt-fab__weave{
+  width:100%;
+  height:100%;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.pt-fab__weave-inner{
+  position:absolute;
+  inset:0;
+  opacity:0.5;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 11px,rgba(201,168,76,0.08) 11px,rgba(201,168,76,0.08) 12px),
+    repeating-linear-gradient(90deg,transparent,transparent 11px,rgba(201,168,76,0.08) 11px,rgba(201,168,76,0.08) 12px);
+}
+.pt-fab__weave-label{
+  position:relative;
+  font-size:11px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:rgba(201,168,76,0.4);
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fab__gsmbadge{
+  position:absolute;
+  bottom:-24px;
+  right:-24px;
+  width:110px;
+  height:110px;
+  background:#0F0E0C;
+  border:1px solid rgba(201,168,76,0.3);
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+}
+.pt-fab__gsmnum{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  color:#C9A84C;
+  line-height:1;
+}
+.pt-fab__gsmlbl{
+  font-size:9px;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:#6B6155;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fab__eye{
+  font-size:10px;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:#C9A84C;
+  margin-bottom:14px;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fab__title{
+  font-family:'Playfair Display',serif!important;
+  font-size:34px!important;
+  font-weight:400!important;
+  color:#E8E0D0!important;
+  line-height:1.2!important;
+  margin:0 0 14px!important;
+  letter-spacing:0!important;
+}
+.pt-fab__sub{
+  font-size:13px;
+  color:#9C9080;
+  line-height:1.8;
+  margin-bottom:36px;
+  font-weight:300;
+  font-family:'DM Sans',sans-serif;
+  max-width:420px;
+}
+.pt-fab__points{
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+}
+.pt-fab__point{
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+}
+.pt-fab__num{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  color:rgba(201,168,76,0.28);
+  flex-shrink:0;
+  width:28px;
+  margin-top:1px;
+}
+.pt-fab__ptitle{
+  font-size:13px;
+  color:#E8E0D0;
+  margin:0 0 3px;
+  font-weight:500;
+  font-family:'DM Sans',sans-serif;
+}
+.pt-fab__pbody{
+  font-size:12px;
+  color:#6B6155;
+  line-height:1.7;
+  margin:0;
+  font-family:'DM Sans',sans-serif;
+}
+@media(max-width:900px){
+  .pt-fab__inner{grid-template-columns:1fr;gap:48px}
+  .pt-fab{padding:56px 24px}
+  .pt-fab__gsmbadge{bottom:-16px;right:16px}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Fabric story",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Fabric image (optional)"
+    }
+  ],
+  "presets": [{ "name": "Fabric story" }]
+}
+{% endschema %}

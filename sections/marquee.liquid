@@ -1,0 +1,56 @@
+<div class="pt-marquee">
+  <div class="pt-marquee__track">
+    <span class="pt-marquee__item">220 GSM Combed Cotton</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Oversized by Design</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Pre-Shrunk</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Side-Seam Construction</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Drop Shoulder Fit</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Made for the Unhurried</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">220 GSM Combed Cotton</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Oversized by Design</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Pre-Shrunk</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Side-Seam Construction</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Drop Shoulder Fit</span><span class="pt-marquee__sep">·</span>
+    <span class="pt-marquee__item">Made for the Unhurried</span><span class="pt-marquee__sep">·</span>
+  </div>
+</div>
+
+<style>
+.pt-marquee {
+  background: #C9A84C;
+  overflow: hidden;
+  padding: 13px 0;
+  width: 100%;
+}
+.pt-marquee__track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: ptScroll 24s linear infinite;
+}
+@keyframes ptScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.pt-marquee__item {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #0F0E0C;
+  font-weight: 500;
+  padding: 0 24px;
+}
+.pt-marquee__sep {
+  font-size: 10px;
+  color: rgba(15,14,12,0.35);
+  align-self: center;
+  flex-shrink: 0;
+}
+</style>
+
+{% schema %}
+{
+  "name": "Marquee strip",
+  "settings": [],
+  "presets": [{ "name": "Marquee strip" }]
+}
+{% endschema %}
