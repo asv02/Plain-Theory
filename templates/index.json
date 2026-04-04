@@ -1,1 +1,125 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Dressed down. Dialed in.","heading_size":"hxl"}},"text_yYwcjk":{"type":"text","settings":{"text":"220 GSM combed cotton. Oversized by design. Four colours. One standard.","text_style":"body"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop the drop","button_link_1":"shopify:\/\/collections","button_style_secondary_1":false,"button_label_2":"Our Story","button_link_2":"shopify:\/\/pages\/size-guide","button_style_secondary_2":true}}},"block_order":["heading","text_yYwcjk","button"],"custom_css":[],"settings":{"image":"shopify:\/\/shop_images\/Gemini_Generated_Image_dfbjsvdfbjsvdfbj.png","image_overlay_opacity":0,"image_height":"large","image_behavior":"zoom-in","desktop_content_position":"middle-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"scheme-3","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":false}},"featured_collection":{"type":"featured-collection","disabled":true,"settings":{"collection":"all","products_to_show":8,"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}},"marquee_QFdNKR":{"type":"marquee","name":"Marquee strip","settings":{}},"featured_products_QkgVbh":{"type":"featured-products","name":"Featured products","settings":{}},"fabric_story_FmPpYc":{"type":"fabric-story","name":"Fabric story","settings":{}},"reviews_qakPbw":{"type":"reviews","name":"Reviews","settings":{}}},"order":["image_banner","featured_collection","marquee_QFdNKR","featured_products_QkgVbh","fabric_story_FmPpYc","reviews_qakPbw"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dressed down. Dialed in.",
+            "heading_size": "hxl"
+          }
+        },
+        "text_yYwcjk": {
+          "type": "text",
+          "settings": {
+            "text": "220 GSM combed cotton. Oversized by design. Four colours. One standard.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop the drop",
+            "button_link_1": "shopify://collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "Our Story",
+            "button_link_2": "shopify://pages/size-guide",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_yYwcjk",
+        "button"
+      ],
+      "custom_css": [],
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_dfbjsvdfbjsvdfbj.png",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "marquee_QFdNKR": {
+      "type": "marquee",
+      "name": "Marquee strip",
+      "settings": {}
+    },
+    "featured_products_QkgVbh": {
+      "type": "featured-products",
+      "name": "Featured products",
+      "settings": {}
+    },
+    "fabric_story_FmPpYc": {
+      "type": "fabric-story",
+      "name": "Fabric story",
+      "settings": {}
+    },
+    "reviews_qakPbw": {
+      "type": "reviews",
+      "name": "Reviews",
+      "settings": {}
+    },
+    "email_capture_7eqgJq": {
+      "type": "email-capture",
+      "name": "Email capture",
+      "settings": {}
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "marquee_QFdNKR",
+    "featured_products_QkgVbh",
+    "fabric_story_FmPpYc",
+    "reviews_qakPbw",
+    "email_capture_7eqgJq"
+  ]
+}
