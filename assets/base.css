@@ -3621,3 +3621,10 @@ body{background:#0F0E0C!important;color:#E8E0D0!important}
 .banner__media img{transition:none!important}
 .banner__buttons a:last-child:hover,.banner__buttons a:last-child:focus,.banner__buttons a:last-child:active{background:transparent!important;color:#E8E0D0!important;border:1px solid rgba(201,168,76,0.7)!important;box-shadow:none!important}
 .banner__buttons a:first-child:hover{background:#E8C97A!important;color:#0F0E0C!important}
+.jdgm-rev{background:#141210!important;border:1px solid rgba(201,168,76,0.12)!important;border-radius:6px!important}
+.jdgm-rev__rating .jdgm-star,.jdgm-summary-stars .jdgm-star{color:#C9A84C!important}
+.jdgm-write-rev-link,.jdgm-write-rev{background:transparent!important;color:#C9A84C!important;border:1px solid rgba(201,168,76,0.4)!important;border-radius:2px!important}
+.jdgm-rev__body,.jdgm-rev__author{color:#9C9080!important}
+.jdgm-rev__title{color:#E8E0D0!important}
+.jdgm-histogram__bar-fill{background:#C9A84C!important}
+.jdgm-medal,.jdgm-medal-icon{display:none!important}
