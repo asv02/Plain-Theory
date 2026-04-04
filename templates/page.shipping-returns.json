@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "shipping-main": {
+      "type": "shipping-returns",
+      "settings": {}
+    }
+  },
+  "order": ["shipping-main"]
+}
