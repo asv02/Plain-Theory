@@ -3628,3 +3628,23 @@ body{background:#0F0E0C!important;color:#E8E0D0!important}
 .jdgm-rev__title{color:#E8E0D0!important}
 .jdgm-histogram__bar-fill{background:#C9A84C!important}
 .jdgm-medal,.jdgm-medal-icon{display:none!important}
+/* Customer account pages — dark theme */
+.customer{background:#0F0E0C!important;min-height:100vh}
+.customer .page-width{max-width:480px!important;padding-top:60px!important;padding-bottom:80px!important}
+.customer h1,.customer h2,.customer h3{font-family:'Playfair Display',serif!important;font-weight:400!important;color:#E8E0D0!important;letter-spacing:0!important;font-size:24px!important}
+.customer p,.customer li{color:#9C9080!important;font-family:'DM Sans',sans-serif!important;font-size:13px!important}
+.customer .field{background:transparent!important}
+.customer .field:before,.customer .field:after{display:none!important}
+.customer .field input,.customer .field__input{background:#1e1b17!important;border:1px solid rgba(201,168,76,0.15)!important;color:#E8E0D0!important;border-radius:4px!important;font-family:'DM Sans',sans-serif!important;font-size:13px!important;padding:13px 16px!important;height:auto!important;min-height:auto!important;box-shadow:none!important;width:100%!important;margin:0!important}
+.customer .field input:focus,.customer .field__input:focus{border-color:rgba(201,168,76,0.45)!important;box-shadow:0 0 0 3px rgba(201,168,76,0.06)!important;outline:none!important}
+.customer .field input::placeholder,.customer .field__input::placeholder{color:#4a4540!important;opacity:1!important}
+.customer label,.customer .field__label,.customer .form__label{font-size:11px!important;letter-spacing:0.1em!important;text-transform:uppercase!important;color:#6B6155!important;font-family:'DM Sans',sans-serif!important;position:static!important;top:auto!important;left:auto!important;pointer-events:auto!important;transition:none!important}
+.customer button[type="submit"],.customer .button{background:#C9A84C!important;color:#0F0E0C!important;border:none!important;border-radius:4px!important;font-size:11px!important;letter-spacing:0.16em!important;text-transform:uppercase!important;font-weight:500!important;font-family:'DM Sans',sans-serif!important;padding:14px 28px!important;width:100%!important;min-height:auto!important;min-width:auto!important;cursor:pointer!important;display:block!important}
+.customer button[type="submit"]:hover,.customer .button:hover{background:#E8C97A!important}
+.customer button[type="submit"]:before,.customer button[type="submit"]:after,.customer .button:before,.customer .button:after{display:none!important}
+.customer a{color:#C9A84C!important}
+.customer a:hover{color:#E8C97A!important;text-decoration-color:#E8C97A!important}
+.customer .link{color:#C9A84C!important;font-size:12px!important}
+.customer .errors ul{background:rgba(224,82,82,0.1)!important;border:1px solid rgba(224,82,82,0.3)!important;border-radius:4px!important;padding:12px 16px!important;list-style:none!important}
+.customer .errors li{color:#F08080!important;font-size:12px!important}
+.content-container.customer{border:1px solid rgba(201,168,76,0.12)!important;border-radius:12px!important;background:#141210!important;padding:36px!important}
