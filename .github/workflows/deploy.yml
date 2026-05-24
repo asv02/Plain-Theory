@@ -1,4 +1,4 @@
-name: Plain Thread
+name: PlainThread
 on:
   push:
     branches: [main]
