@@ -1,4 +1,4 @@
-name: PlainThread
+name: Deploy Theme
 on:
   push:
     branches: [main]
@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - run: npm install -g @shopify/cli
-      - run: shopify theme push --store=${{ secrets.SHOPIFY_STORE }}
+      - run: shopify theme push --store=${{ secrets.SHOPIFY_STORE }} --theme=185961283879 --allow-live
         env:
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
