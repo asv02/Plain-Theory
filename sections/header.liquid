@@ -98,6 +98,91 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+  .header-wrapper {
+    background: #121212;
+    color: #FFFFFF;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .shopify-section-header-sticky .header-wrapper,
+  .shopify-section-header-sticky .header {
+    background: #121212;
+  }
+
+  .header,
+  .header * {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .header__heading-link,
+  .header__heading-link:visited,
+  .header__menu-item,
+  .header__icon,
+  .localization-form .button,
+  .localization-form summary {
+    color: #FFFFFF;
+  }
+
+  .header__menu-item span,
+  .header__icon .svg-wrapper,
+  .header__icon svg,
+  .header__icon .icon,
+  .localization-form,
+  .localization-form .caption-large {
+    color: #B3B3B3;
+    stroke: currentColor;
+  }
+
+  .header__menu-item:hover,
+  .header__menu-item:hover span,
+  .header__icon:hover,
+  .header__icon:focus-visible,
+  .localization-form summary:hover,
+  .localization-form summary:focus-visible {
+    color: #FFFFFF;
+  }
+
+  .header__active-menu-item,
+  .list-menu__item--active,
+  .menu-drawer__menu-item--active,
+  .menu-drawer__account,
+  .menu-drawer__close-button {
+    color: #FFFFFF;
+  }
+
+  .menu-drawer,
+  .menu-drawer__submenu,
+  .header__submenu,
+  .mega-menu__content,
+  .predictive-search,
+  .search-modal__content,
+  .cart-notification {
+    background: #121212;
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .menu-drawer__menu-item,
+  .menu-drawer__utility-links a,
+  .header__submenu .list-menu__item,
+  .predictive-search__item,
+  .predictive-search__search-for-button,
+  .search__input.field__input::placeholder {
+    color: #B3B3B3;
+  }
+
+  .menu-drawer__menu-item:hover,
+  .menu-drawer__utility-links a:hover,
+  .header__submenu .list-menu__item:hover,
+  .predictive-search__item:hover,
+  .predictive-search__search-for-button:hover {
+    color: #FFFFFF;
+  }
+
+  .cart-count-bubble {
+    background: #FFFFFF;
+    color: #121212;
+  }
 {%- endstyle -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -656,3 +741,4 @@
   ]
 }
 {% endschema %}
+
