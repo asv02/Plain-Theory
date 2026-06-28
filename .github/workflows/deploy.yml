@@ -11,4 +11,4 @@ jobs:
       - run: npm install -g @shopify/cli
       - run: shopify theme push --store=${{ secrets.SHOPIFY_STORE }} --theme=185961283879 --allow-live
         env:
-          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+          SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}k
