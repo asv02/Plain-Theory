@@ -34,7 +34,7 @@
     </div>
 
     <!-- SHIPPING -->
-    <div class="pt-sr-block">
+    <div class="pt-sr-block" id="shipping">
       <div class="pt-sr-block__header">
         <p class="pt-sr-block__eye">Shipping</p>
         <h2 class="pt-sr-block__title">Delivery information</h2>
@@ -63,7 +63,7 @@
 
         <div class="pt-sr-row">
           <div class="pt-sr-row__label">Tracking</div>
-          <div class="pt-sr-row__value">A tracking link is sent to your email and phone number as soon as your order is dispatched. You can also track your order at any time from our <a href="/apps/tracktor" class="pt-sr-link">Track Order</a> page.</div>
+          <div class="pt-sr-row__value">A tracking link is sent to your email and phone number as soon as your order is dispatched. You can also track your order at any time from our <a href="/pages/trackorder" class="pt-sr-link">Track order</a> page.</div>
         </div>
 
         <div class="pt-sr-row">
@@ -80,7 +80,7 @@
     </div>
 
     <!-- RETURNS & EXCHANGES -->
-    <div class="pt-sr-block">
+    <div class="pt-sr-block" id="returns">
       <div class="pt-sr-block__header">
         <p class="pt-sr-block__eye">Returns & Exchanges</p>
         <h2 class="pt-sr-block__title">What if something isn't right?</h2>
@@ -313,6 +313,15 @@
   .pt-sr-summary{grid-template-columns:1fr}
 }
 </style>
+
+{%- if page.handle == 'returns-exchanges' -%}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var target = document.getElementById('returns');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+</script>
+{%- endif -%}
 
 {% schema %}
 {

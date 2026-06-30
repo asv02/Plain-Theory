@@ -20,7 +20,7 @@
 
     {%- assign formatted_balance = gift_card.balance | money_without_trailing_zeros | strip_html -%}
 
-    <title>{{ 'gift_cards.issued.title' | t: value: formatted_balance, shop: shop.name }}</title>
+    <title>{{ 'gift_cards.issued.title' | t: value: formatted_balance, shop: 'Plain Thread' }}</title>
 
     <meta name="description" content="{{ 'gift_cards.issued.subtext' | t }}">
 
@@ -130,7 +130,7 @@
     <main>
       <div class="gift-card__image-wrapper">
         {%- if settings.logo != blank -%}
-          {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+          {%- assign logo_alt = settings.logo.alt | default: 'Plain Thread' | escape -%}
           {{ settings.logo | image_url: width: 570 | image_tag: class: 'gift-card__image', alt: logo_alt }}
         {%- else %}
           <img
@@ -143,7 +143,7 @@
           >
         {%- endif %}
       </div>
-      <h2>{{ shop.name }}</h2>
+      <h2>Plain Thread</h2>
       <div class="gift-card__text-wrapper">
         <p class="gift-card__text">{{ 'gift_cards.issued.how_to_use_gift_card' | t }}</p>
       </div>

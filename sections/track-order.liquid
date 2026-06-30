@@ -1,0 +1,94 @@
+<section class="pt-to-hero">
+  <div class="pt-to-hero__content">
+    <p class="pt-to-eye">Order tracking</p>
+    <h1 class="pt-to-hero__h1">Track your<br><em>order.</em></h1>
+    <p class="pt-to-hero__sub">Enter your order number and email on our tracking page to see real-time delivery updates.</p>
+  </div>
+</section>
+
+<section class="pt-to-body">
+  <div class="pt-to-inner">
+    <div class="pt-to-card">
+      <p class="pt-to-card__title">Already have a tracking link?</p>
+      <p class="pt-to-card__body">Check your email or SMS — we send tracking details as soon as your order is dispatched.</p>
+      <a href="/apps/tracktor" class="pt-to-btn">Open tracking page →</a>
+    </div>
+    <div class="pt-to-links">
+      <a href="/pages/shipping-returns" class="pt-to-quick">Shipping info</a>
+      <a href="/pages/contact" class="pt-to-quick">Contact us</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.pt-to-hero{
+  background:#F7F5EF;min-height:280px;
+  display:flex;align-items:flex-end;
+  padding:60px 48px;
+  border-bottom:1px solid rgba(18,18,18,0.12);
+  position:relative;overflow:hidden;
+}
+.pt-to-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(18,18,18,0.03) 48px,rgba(18,18,18,0.03) 49px),
+    repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(18,18,18,0.03) 48px,rgba(18,18,18,0.03) 49px);
+}
+.pt-to-hero__content{position:relative;z-index:1;max-width:620px}
+.pt-to-eye{
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:#121212;margin-bottom:14px;font-family:'DM Sans',sans-serif;
+}
+.pt-to-hero__h1{
+  font-family:'Playfair Display',serif!important;
+  font-size:44px!important;font-weight:400!important;
+  color:#121212!important;line-height:1.1!important;
+  margin:0 0 16px!important;letter-spacing:0!important;
+}
+.pt-to-hero__h1 em{font-style:italic}
+.pt-to-hero__sub{
+  font-size:14px;color:#121212;line-height:1.7;
+  margin:0;font-family:'DM Sans',sans-serif;font-weight:300;
+}
+.pt-to-body{padding:56px 48px;background:#F7F5EF}
+.pt-to-inner{max-width:640px;margin:0 auto}
+.pt-to-card{
+  background:#F7F5EF;border:1px solid rgba(18,18,18,0.12);
+  padding:32px;border-radius:3px;margin-bottom:24px;
+}
+.pt-to-card__title{
+  font-size:13px;color:#121212;font-weight:500;
+  margin:0 0 8px;font-family:'DM Sans',sans-serif;
+}
+.pt-to-card__body{
+  font-size:12px;color:#121212;line-height:1.7;
+  margin:0 0 24px;font-family:'DM Sans',sans-serif;font-weight:300;
+}
+.pt-to-btn{
+  display:inline-block;padding:14px 28px;background:#121212;color:#F7F5EF;
+  font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;border-radius:2px;font-family:'DM Sans',sans-serif;
+  transition:opacity 0.2s;
+}
+.pt-to-btn:hover{opacity:0.85}
+.pt-to-links{display:flex;gap:12px;flex-wrap:wrap}
+.pt-to-quick{
+  font-size:11px;letter-spacing:0.1em;text-transform:uppercase;
+  color:#121212;text-decoration:none;padding:10px 16px;
+  border:1px solid rgba(18,18,18,0.15);border-radius:2px;
+  font-family:'DM Sans',sans-serif;
+}
+@media(max-width:900px){
+  .pt-to-hero{padding:48px 24px}
+  .pt-to-body{padding:40px 24px}
+  .pt-to-hero__h1{font-size:36px!important}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Track order",
+  "settings": [],
+  "presets": [{ "name": "Track order" }]
+}
+{% endschema %}

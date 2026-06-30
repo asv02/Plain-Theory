@@ -1,0 +1,9 @@
+{%- liquid
+  assign menu_url = link.url
+  assign title_lower = link.title | downcase | strip
+  case title_lower
+    when 'contact', 'contact us'
+      assign menu_url = '/pages/contact'
+  endcase
+-%}
+{{- menu_url -}}
