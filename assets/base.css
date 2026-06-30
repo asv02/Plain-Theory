@@ -3607,7 +3607,7 @@ body{background:#F7F5EF!important;color:#121212!important}
 .announcement-bar__message,.announcement-bar__message *{color:#121212!important;font-size:10px!important;letter-spacing:0.16em!important;font-weight:500!important;text-transform:uppercase!important}
 .banner__heading,.banner__heading h2{font-size:52px!important;font-weight:400!important;color:#121212!important;line-height:1.1!important}
 .banner__content{text-align:center!important}
-.banner__box{background:rgba(247,245,239,0.82)!important;border:1px solid rgba(18,18,18,0.12)!important;border-radius:4px!important}
+.banner__box{background:transparent!important;border:none!important;border-radius:4px!important}
 .banner__content .rte p{color:#121212!important;font-size:13px!important}
 .banner__buttons{gap:12px!important;margin-top:16px!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important}
 .banner__buttons a:first-child{background:#121212!important;color:#F7F5EF!important;border:none!important;border-radius:2px!important;padding:14px 28px!important;width:auto!important;min-width:0!important;font-size:11px!important;letter-spacing:.14em!important;text-transform:uppercase!important}
