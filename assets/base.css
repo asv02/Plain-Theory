@@ -3595,8 +3595,8 @@ details-disclosure > details {
     transform: translateX(100%) scaleX(0);
   }
 }
-/* PLAIN THEORY CUSTOM THEME */
-/* PLAIN THEORY CUSTOM THEME */
+/* PLAIN THREAD CUSTOM THEME */
+/* PLAIN THREAD CUSTOM THEME */
 body{background:#F7F5EF!important;color:#121212!important}
 .header-wrapper,.header{background:rgba(247,245,239,0.95)!important;border-bottom:1px solid rgba(18,18,18,0.15)!important}
 .header__heading-link,.header__heading-link:visited,.header__heading-link .h2{color:#121212!important;letter-spacing:0.18em!important;text-transform:uppercase!important}
@@ -3649,6 +3649,7 @@ body{background:#F7F5EF!important;color:#121212!important}
 .customer .errors ul{background:rgba(224,82,82,0.1)!important;border:1px solid rgba(224,82,82,0.3)!important;border-radius:4px!important;padding:12px 16px!important;list-style:none!important}
 .customer .errors li{color:#F08080!important;font-size:12px!important}
 .content-container.customer{border:1px solid rgba(18,18,18,0.12)!important;border-radius:12px!important;background:#FFFFFF!important;padding:36px!important}
+
 
 
 
