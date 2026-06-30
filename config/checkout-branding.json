@@ -1,0 +1,14 @@
+{
+  "name": "Plain Thread",
+  "colors": {
+    "background": "#F7F5EF",
+    "text": "#121212",
+    "accent": "#121212",
+    "button_background": "#121212",
+    "button_text": "#F7F5EF",
+    "form_background": "#FFFFFF",
+    "border": "rgba(18, 18, 18, 0.12)",
+    "error": "#C0392B"
+  },
+  "notes": "Apply in Shopify Admin: Settings > Checkout > Customize. Match Plain Thread storefront palette."
+}

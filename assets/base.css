@@ -3649,6 +3649,13 @@ body{background:#F7F5EF!important;color:#121212!important}
 .customer .errors ul{background:rgba(224,82,82,0.1)!important;border:1px solid rgba(224,82,82,0.3)!important;border-radius:4px!important;padding:12px 16px!important;list-style:none!important}
 .customer .errors li{color:#F08080!important;font-size:12px!important}
 .content-container.customer{border:1px solid rgba(18,18,18,0.12)!important;border-radius:12px!important;background:#FFFFFF!important;padding:36px!important}
+/* Cart page — match Plain Thread theme */
+.cart,.cart__contents,.cart__footer-wrapper,.cart__footer{background:#F7F5EF!important;color:#121212!important}
+.cart__empty-text,.cart__login-title,.cart-item__name,.cart-item__price-wrapper,.totals__subtotal-value,.totals__total-value,.tax-note{color:#121212!important;font-family:'DM Sans',sans-serif!important}
+.cart__checkout-button,.cart__ctas .button{background:#121212!important;color:#F7F5EF!important;border:none!important;border-radius:2px!important;font-size:11px!important;letter-spacing:0.14em!important;text-transform:uppercase!important}
+.cart__checkout-button:hover,.cart__ctas .button:hover{background:#000000!important;color:#F7F5EF!important}
+.cart-item{border-bottom:1px solid rgba(18,18,18,0.12)!important}
+.cart__note .field__input,.cart-item__quantity-wrapper .quantity{background:#FFFFFF!important;border:1px solid rgba(18,18,18,0.15)!important;color:#121212!important}
 
 
 

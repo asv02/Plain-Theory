@@ -12,3 +12,8 @@ jobs:
       - run: shopify theme push --store=${{ secrets.SHOPIFY_STORE }} --theme=198012207185 --allow-live
         env:
           SHOPIFY_CLI_THEME_TOKEN: ${{ secrets.SHOPIFY_CLI_THEME_TOKEN }}
+      - name: Apply checkout branding
+        run: node scripts/apply-checkout-branding.mjs
+        env:
+          SHOPIFY_STORE: ${{ secrets.SHOPIFY_STORE }}
+          SHOPIFY_ADMIN_ACCESS_TOKEN: ${{ secrets.SHOPIFY_ADMIN_ACCESS_TOKEN }}
