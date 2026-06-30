@@ -3605,13 +3605,13 @@ body{background:#F7F5EF!important;color:#121212!important}
 .header__icon,.header__icon svg,.header__icon .icon{color:#121212!important;fill:none!important;stroke:#121212!important}
 .announcement-bar{background:#F7F5EF!important;color:#121212!important}
 .announcement-bar__message,.announcement-bar__message *{color:#121212!important;font-size:10px!important;letter-spacing:0.16em!important;font-weight:500!important;text-transform:uppercase!important}
-.banner__heading,.banner__heading h2{font-size:52px!important;font-weight:400!important;color:#121212!important;line-height:1.1!important}
+.banner__heading,.banner__heading h2{font-size:52px!important;font-weight:400!important;color:#F7F5EF!important;line-height:1.1!important;text-shadow:0 2px 10px rgba(18,18,18,0.45)!important}
 .banner__content{text-align:center!important}
 .banner__box{background:transparent!important;border:none!important;border-radius:4px!important}
-.banner__content .rte p{color:#121212!important;font-size:13px!important}
+.banner__content .rte p{color:#F7F5EF!important;font-size:13px!important;text-shadow:0 1px 6px rgba(18,18,18,0.45)!important}
 .banner__buttons{gap:12px!important;margin-top:16px!important;flex-direction:row!important;flex-wrap:wrap!important;justify-content:center!important}
 .banner__buttons a:first-child{background:#121212!important;color:#F7F5EF!important;border:none!important;border-radius:2px!important;padding:14px 28px!important;width:auto!important;min-width:0!important;font-size:11px!important;letter-spacing:.14em!important;text-transform:uppercase!important}
-.banner__buttons a:last-child{background:transparent!important;color:#121212!important;border:1px solid rgba(18,18,18,0.5)!important;border-radius:2px!important;padding:14px 28px!important;width:auto!important;min-width:0!important;font-size:11px!important;letter-spacing:.12em!important;text-transform:uppercase!important;backdrop-filter:none!important;box-shadow:none!important}
+.banner__buttons a:last-child{background:transparent!important;color:#F7F5EF!important;border:1px solid rgba(247,245,239,0.7)!important;border-radius:2px!important;padding:14px 28px!important;width:auto!important;min-width:0!important;font-size:11px!important;letter-spacing:.12em!important;text-transform:uppercase!important;backdrop-filter:none!important;box-shadow:none!important}
 .button,.button--primary{background:#121212!important;color:#F7F5EF!important;border-radius:2px!important;letter-spacing:.12em!important;text-transform:uppercase!important}
 .button:hover,.button--primary:hover{background:#121212!important}
 .shopify-section:has(.announcement-bar){background:#F7F5EF!important}
@@ -3620,7 +3620,7 @@ body{background:#F7F5EF!important;color:#121212!important}
 .banner__media::after{content:none!important;display:none!important}
 .banner:hover .banner__media::after{content:none!important;display:none!important}
 .banner__media img{transition:none!important}
-.banner__buttons a:last-child:hover,.banner__buttons a:last-child:focus,.banner__buttons a:last-child:active{background:transparent!important;color:#121212!important;border:1px solid rgba(18,18,18,0.7)!important;box-shadow:none!important}
+.banner__buttons a:last-child:hover,.banner__buttons a:last-child:focus,.banner__buttons a:last-child:active{background:transparent!important;color:#F7F5EF!important;border:1px solid rgba(247,245,239,0.9)!important;box-shadow:none!important}
 .banner__buttons a:first-child:hover{background:#121212!important;color:#F7F5EF!important}
 .jdgm-rev{background:#FFFFFF!important;border:1px solid rgba(18,18,18,0.12)!important;border-radius:6px!important}
 .jdgm-rev__rating .jdgm-star,.jdgm-summary-stars .jdgm-star{color:#121212!important}
