@@ -1,0 +1,169 @@
+<section class="pt-ct-hero">
+  <div class="pt-ct-hero__content">
+    <p class="pt-ct-eye">Get in touch</p>
+    <h1 class="pt-ct-hero__h1">We're here<br><em>to help.</em></h1>
+    <p class="pt-ct-hero__sub">Questions about sizing, orders, or exchanges? Send us a message and we'll get back within 24 hours.</p>
+  </div>
+</section>
+
+<section class="pt-ct-body">
+  <div class="pt-ct-inner">
+
+    <div class="pt-ct-info">
+      <div class="pt-ct-card">
+        <p class="pt-ct-card__title">Email</p>
+        <p class="pt-ct-card__body"><a href="mailto:akash07may@gmail.com" class="pt-ct-link">akash07may@gmail.com</a></p>
+      </div>
+      <div class="pt-ct-card">
+        <p class="pt-ct-card__title">Instagram</p>
+        <p class="pt-ct-card__body"><a href="https://www.instagram.com/plainthread.in/" class="pt-ct-link" target="_blank" rel="noopener">@plainthread.in</a></p>
+      </div>
+      <div class="pt-ct-card">
+        <p class="pt-ct-card__title">Response time</p>
+        <p class="pt-ct-card__body">Within 24 hours, every day of the week.</p>
+      </div>
+    </div>
+
+    <div class="pt-ct-links">
+      <p class="pt-ct-links__label">Quick links</p>
+      <div class="pt-ct-links__grid">
+        <a href="/pages/faq" class="pt-ct-quick">FAQ</a>
+        <a href="/pages/size-guide" class="pt-ct-quick">Size guide</a>
+        <a href="/pages/shipping-returns" class="pt-ct-quick">Shipping & returns</a>
+        <a href="/pages/fabric-story" class="pt-ct-quick">Fabric story</a>
+      </div>
+    </div>
+
+    <div class="pt-ct-form-wrap">
+      <p class="pt-ct-form__label">Send a message</p>
+      {% form 'contact', id: 'ContactForm' %}
+        {%- if form.posted_successfully? -%}
+          <p class="pt-ct-success">Thanks for reaching out. We'll reply within 24 hours.</p>
+        {%- endif -%}
+        {%- if form.errors -%}
+          <p class="pt-ct-error">Please check your details and try again.</p>
+        {%- endif -%}
+        <div class="pt-ct-fields">
+          <input class="pt-ct-input" type="text" name="contact[name]" placeholder="Your name" required autocomplete="name">
+          <input class="pt-ct-input" type="email" name="contact[email]" placeholder="Your email" required autocomplete="email">
+          <textarea class="pt-ct-textarea" name="contact[body]" placeholder="How can we help?" rows="5" required></textarea>
+          <button type="submit" class="pt-ct-submit">Send message</button>
+        </div>
+      {% endform %}
+    </div>
+
+  </div>
+</section>
+
+<style>
+.pt-ct-hero{
+  background:#F7F5EF;min-height:280px;
+  display:flex;align-items:flex-end;
+  padding:60px 48px;
+  border-bottom:1px solid rgba(18,18,18,0.12);
+  position:relative;overflow:hidden;
+}
+.pt-ct-hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 48px,rgba(18,18,18,0.03) 48px,rgba(18,18,18,0.03) 49px),
+    repeating-linear-gradient(90deg,transparent,transparent 48px,rgba(18,18,18,0.03) 48px,rgba(18,18,18,0.03) 49px);
+}
+.pt-ct-hero__content{position:relative;z-index:1;max-width:620px}
+.pt-ct-eye{
+  font-size:10px;letter-spacing:0.22em;text-transform:uppercase;
+  color:#121212;margin-bottom:14px;font-family:'DM Sans',sans-serif;
+}
+.pt-ct-hero__h1{
+  font-family:'Playfair Display',serif!important;
+  font-size:44px!important;font-weight:400!important;
+  color:#121212!important;line-height:1.1!important;
+  margin:0 0 16px!important;
+}
+.pt-ct-hero__h1 em{font-style:italic;color:#121212}
+.pt-ct-hero__sub{
+  font-size:13px;color:#121212;font-weight:300;
+  line-height:1.7;font-family:'DM Sans',sans-serif;max-width:480px;
+}
+.pt-ct-body{background:#F7F5EF;padding:64px 48px}
+.pt-ct-inner{max-width:760px;margin:0 auto}
+.pt-ct-info{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:16px;margin-bottom:48px;
+}
+.pt-ct-card{
+  background:#F7F5EF;border:1px solid rgba(18,18,18,0.12);
+  border-radius:6px;padding:24px;
+}
+.pt-ct-card__title{
+  font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
+  color:#121212;margin:0 0 8px;font-family:'DM Sans',sans-serif;font-weight:500;
+}
+.pt-ct-card__body{
+  font-size:13px;color:#121212;line-height:1.6;
+  margin:0;font-family:'DM Sans',sans-serif;font-weight:300;
+}
+.pt-ct-link{
+  color:#121212;text-decoration:none;
+  border-bottom:1px solid rgba(18,18,18,0.3);
+}
+.pt-ct-link:hover{border-color:#121212}
+.pt-ct-links{margin-bottom:48px}
+.pt-ct-links__label{
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:#121212;margin-bottom:16px;font-family:'DM Sans',sans-serif;
+}
+.pt-ct-links__grid{display:flex;flex-wrap:wrap;gap:10px}
+.pt-ct-quick{
+  padding:8px 16px;border:1px solid rgba(18,18,18,0.12);
+  border-radius:20px;font-size:11px;color:#121212;
+  text-decoration:none;letter-spacing:0.06em;
+  font-family:'DM Sans',sans-serif;transition:border-color 0.2s;
+}
+.pt-ct-quick:hover{border-color:rgba(18,18,18,0.35)}
+.pt-ct-form-wrap{
+  border-top:1px solid rgba(18,18,18,0.1);
+  padding-top:48px;
+}
+.pt-ct-form__label{
+  font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
+  color:#121212;margin-bottom:20px;font-family:'DM Sans',sans-serif;
+}
+.pt-ct-fields{display:flex;flex-direction:column;gap:12px}
+.pt-ct-input,.pt-ct-textarea{
+  background:#F7F5EF!important;border:1px solid rgba(18,18,18,0.15)!important;
+  color:#121212!important;padding:14px 18px!important;
+  font-size:13px!important;font-family:'DM Sans',sans-serif!important;
+  border-radius:2px!important;outline:none!important;width:100%;
+  box-shadow:none!important;
+}
+.pt-ct-input:focus,.pt-ct-textarea:focus{border-color:rgba(18,18,18,0.4)!important}
+.pt-ct-textarea{resize:vertical;min-height:120px}
+.pt-ct-submit{
+  align-self:flex-start;
+  background:#121212!important;color:#F7F5EF!important;
+  padding:14px 36px!important;font-size:11px!important;
+  letter-spacing:0.14em!important;text-transform:uppercase!important;
+  font-weight:500!important;border:none!important;border-radius:2px!important;
+  cursor:pointer!important;font-family:'DM Sans',sans-serif!important;
+}
+.pt-ct-success,.pt-ct-error{
+  font-size:13px;font-family:'DM Sans',sans-serif;margin-bottom:16px;
+}
+.pt-ct-success{color:#121212}
+.pt-ct-error{color:#121212}
+@media(max-width:768px){
+  .pt-ct-hero{padding:40px 24px;min-height:220px}
+  .pt-ct-hero__h1{font-size:32px!important}
+  .pt-ct-body{padding:48px 24px}
+  .pt-ct-info{grid-template-columns:1fr}
+}
+</style>
+
+{% schema %}
+{
+  "name": "Contact page",
+  "settings": [],
+  "presets": []
+}
+{% endschema %}

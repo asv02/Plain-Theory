@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "fabric-story-main": {
+      "type": "fabric-story",
+      "settings": {}
+    }
+  },
+  "order": ["fabric-story-main"]
+}
