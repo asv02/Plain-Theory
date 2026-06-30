@@ -44,7 +44,7 @@
             "type": "color",
             "id": "background",
             "label": "t:settings_schema.colors.settings.background.label",
-            "default": "#FFFFFF"
+            "default": "#F7F5EF"
           },
           {
             "type": "color_background",
@@ -68,7 +68,7 @@
             "type": "color",
             "id": "button_label",
             "label": "t:settings_schema.colors.settings.button_label.label",
-            "default": "#FFFFFF"
+            "default": "#F7F5EF"
           },
           {
             "type": "color",
@@ -1453,3 +1453,4 @@
     ]
   }
 ]
+

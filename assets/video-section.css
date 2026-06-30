@@ -40,9 +40,11 @@
 }
 
 .video-section__media video {
-  background: #000000;
+  background: #F7F5EF;
 }
 
 .video-section__media.media-fit-cover video {
   object-fit: cover;
 }
+
+
