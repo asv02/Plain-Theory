@@ -105,6 +105,34 @@
     "reviews_qakPbw": {
       "type": "reviews",
       "name": "Reviews",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "text": "The 220 GSM fabric feels noticeably heavier than my other tees. Worth every rupee.",
+            "author": "Arjun K."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "text": "Ordered the black one — fit is exactly as described. Slightly oversized, sits well.",
+            "author": "Priya M."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "text": "Finally a plain tee that doesn't feel cheap after two washes. The rose pink colour is perfect.",
+            "author": "Neha S."
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
       "settings": {}
     },
     "email_capture_7eqgJq": {

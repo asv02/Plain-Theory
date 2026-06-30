@@ -11,13 +11,21 @@
         <span class="pt-rv__score">Verified buyer reviews</span>
       </div>
     </div>
-    {% render 'judgeme_widgets', widget_type: 'judgeme_all_reviews_widget', concierge_install: true %}
+
+    <div class="pt-rv__list">
+      {%- for block in section.blocks -%}
+        <figure class="pt-rv__item" {{ block.shopify_attributes }}>
+          <blockquote class="pt-rv__text">{{ block.settings.text }}</blockquote>
+          <figcaption class="pt-rv__by">by {{ block.settings.author }}</figcaption>
+        </figure>
+      {%- endfor -%}
+    </div>
 
   </div>
 </section>
 
 <style>
-.pt-rv{k
+.pt-rv{
   background:#F7F5EF;
   padding:80px 48px;
 }
@@ -30,6 +38,8 @@
   justify-content:space-between;
   align-items:flex-end;
   margin-bottom:48px;
+  padding-bottom:32px;
+  border-bottom:1px solid rgba(18,18,18,0.12);
 }
 .pt-rv__eye{
   font-size:10px;
@@ -63,79 +73,37 @@
   color:#121212;
   font-family:'DM Sans',sans-serif;
 }
-
-/* Judge.me widget overrides — match Plain Thread theme */
-.jdgm-all-reviews-widget,
-.jdgm-widget{
-  background:transparent!important;
-  color:#121212!important;
-  font-family:'DM Sans',sans-serif!important;
+.pt-rv__list{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:32px 40px;
 }
-.jdgm-rev{
-  background:#F7F5EF!important;
-  border:1px solid rgba(18,18,18,0.12)!important;
-  border-radius:6px!important;
-  padding:24px!important;
-  margin-bottom:16px!important;
+.pt-rv__item{
+  margin:0;
 }
-.jdgm-rev:hover{
-  border-color:rgba(18,18,18,0.28)!important;
+.pt-rv__text{
+  font-family:'DM Sans',sans-serif;
+  font-size:14px;
+  line-height:1.75;
+  color:#121212;
+  margin:0 0 12px;
+  font-weight:300;
 }
-.jdgm-rev__rating .jdgm-star{
-  color:#121212!important;
+.pt-rv__by{
+  font-family:'DM Sans',sans-serif;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:rgba(18,18,18,0.55);
+  margin:0;
 }
-.jdgm-rev__author{
-  color:#121212!important;
-  font-size:11px!important;
-  text-transform:uppercase!important;
-  letter-spacing:0.1em!important;
-}
-.jdgm-rev__timestamp{
-  color:#121212!important;
-  font-size:10px!important;
-}
-.jdgm-rev__body{
-  color:#121212!important;
-  font-size:13px!important;
-  line-height:1.8!important;
-  font-style:italic!important;
-}
-.jdgm-rev__title{
-  color:#121212!important;
-  font-family:'Playfair Display',serif!important;
-  font-weight:400!important;
-}
-.jdgm-paginate__page,
-.jdgm-paginate__arrow{
-  color:#121212!important;
-  border-color:rgba(18,18,18,0.3)!important;
-}
-.jdgm-paginate__page.jdgm-paginate__page--active{
-  background:#121212!important;
-  color:#F7F5EF!important;
-}
-.jdgm-histogram__bar-fill{
-  background:#121212!important;
-}
-.jdgm-summary-stars .jdgm-star{
-  color:#121212!important;
-}
-.jdgm-write-rev-link{
-  color:#121212!important;
-  border:1px solid rgba(18,18,18,0.4)!important;
-  border-radius:2px!important;
-  font-size:11px!important;
-  letter-spacing:0.12em!important;
-  text-transform:uppercase!important;
-}
-.jdgm-write-rev-link:hover{
-  background:#121212!important;
-  color:#F7F5EF!important;
-}
-
 @media(max-width:900px){
   .pt-rv{padding:56px 24px}
   .pt-rv__header{flex-direction:column;align-items:flex-start;gap:12px}
+  .pt-rv__list{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+}
+@media(max-width:540px){
+  .pt-rv__list{grid-template-columns:1fr;gap:24px}
 }
 </style>
 
@@ -143,9 +111,53 @@
 {
   "name": "Reviews",
   "settings": [],
-  "presets": [{ "name": "Reviews" }]
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "The 220 GSM fabric feels noticeably heavier than my other tees. Worth every rupee."
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Username",
+          "default": "Arjun K."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Reviews",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "text": "The 220 GSM fabric feels noticeably heavier than my other tees. Worth every rupee.",
+            "author": "Arjun K."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Ordered the black one — fit is exactly as described. Slightly oversized, sits well.",
+            "author": "Priya M."
+          }
+        },
+        {
+          "type": "review",
+          "settings": {
+            "text": "Finally a plain tee that doesn't feel cheap after two washes. The rose pink colour is perfect.",
+            "author": "Neha S."
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
-
-
-
