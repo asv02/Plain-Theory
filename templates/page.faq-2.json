@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-{
-  "sections": {
-    "fabric-story-main": {
-      "type": "fabric-story",
-      "settings": {}
-    }
-  },
-  "order": ["fabric-story-main"]
-=======
 /*
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
@@ -30,5 +20,4 @@
   "order": [
     "main"
   ]
->>>>>>> a582ae4d4c343b790d8a78897587bb5dc673f983
 }
