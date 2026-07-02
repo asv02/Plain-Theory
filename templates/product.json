@@ -54,6 +54,33 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "text_y8RaEV": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.features | metafield_text: field: 'title' }}",
+            "text_style": "body"
+          }
+        },
+        "text_WQQKhx": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.metafields.custom.wash_care | metafield_text: field: 'drying' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'iron' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'bleach' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'water_temperature' }}",
+            "text_style": "body"
+          }
+        },
+        "complementary_KgrgPG": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Pairs well with",
+            "make_collapsible_row": true,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "counter",
+            "image_ratio": "square",
+            "enable_quick_add": false
+          }
         }
       },
       "block_order": [
@@ -64,7 +91,10 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "text_y8RaEV",
+        "text_WQQKhx",
+        "complementary_KgrgPG"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -108,20 +138,6 @@
     },
     "1775447830ec3f2113": {
       "type": "apps",
-      "blocks": {
-        "judge_me_reviews_review_widget_G3qfaU": {
-          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "review_data": "sample_data",
-            "max_width": 1200,
-            "show_shop_reviews": false,
-            "empty_state": "empty_widget"
-          }
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_review_widget_G3qfaU"
-      ],
       "settings": {
         "include_margins": true
       }
