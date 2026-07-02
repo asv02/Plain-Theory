@@ -235,6 +235,26 @@ product-info {
   margin-bottom: 0;
 }
 
+.product__text.inline-richtext {
+  margin: 0;
+  color: rgba(var(--color-foreground), 0.75);
+  line-height: 1.8;
+}
+
+.product__text.inline-richtext > * {
+  margin: 0 0 1.5rem;
+}
+
+.product__text.inline-richtext a {
+  color: rgba(var(--color-foreground), 0.85);
+  text-decoration: underline;
+}
+
+.product__text.inline-richtext strong,
+.product__text.inline-richtext b {
+  font-weight: 600;
+}
+
 a.product__text {
   display: block;
   text-decoration: none;
