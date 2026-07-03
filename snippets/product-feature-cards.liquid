@@ -6,52 +6,54 @@
 
 <section class="pt-features">
 
-    <div class="pt-section-heading">
+  <div class="pt-section-heading">
 
-        <p class="pt-section-eyebrow">
-            WHY YOU'LL LOVE IT
-        </p>
+    <p class="pt-section-eyebrow">
+      WHY YOU'LL LOVE IT
+    </p>
 
-        <h2 class="pt-section-title">
-            Thoughtfully made.<br>
-            Designed to be worn every day.
-        </h2>
+    <h2 class="pt-section-title">
+      Thoughtfully made.<br>
+      Designed to be worn every day.
+    </h2>
 
-    </div>
+  </div>
 
-    <div class="pt-feature-grid">
+  <div class="pt-feature-grid">
 
-        {% for feature in features %}
+    {% for feature in features %}
 
-            <article class="pt-feature-card">
+      <article class="pt-feature-card">
 
-                <div class="pt-feature-icon">
+        <div class="pt-feature-icon">
 
-                    ✓
+          {% if feature.image != blank %}
 
-                </div>
+            <img
+              src="{{ feature.image | image_url: width:80 }}"
+              alt="{{ feature.title }}"
+              loading="lazy"
+              width="40"
+              height="40"
+            >
 
-                <div class="pt-feature-content">
+          {% endif %}
 
-                    <h3>
+        </div>
 
-                        {{ feature.title }}
+        <div class="pt-feature-content">
 
-                    </h3>
+          <h3>{{ feature.title }}</h3>
 
-                    <p>
+          <p>{{ feature.description }}</p>
 
-                        {{ feature.description }}
+        </div>
 
-                    </p>
+      </article>
 
-                </div>
+    {% endfor %}
 
-            </article>
-
-        {% endfor %}
-
-    </div>
+  </div>
 
 </section>
 
