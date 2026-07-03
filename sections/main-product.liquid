@@ -677,10 +677,6 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
-      {% render 'product-feature-cards', product: product %}
-      {% render 'product-material', product: product %}
-      {% render 'product-wash-care', product: product %}
-      {% render 'product-trust-badges' %}
       <a href="{{ product.url }}" class="link product__view-details animate-arrow">
         {{ 'products.product.view_full_details' | t }}
         {{- 'icon-arrow.svg' | inline_asset_content -}}
