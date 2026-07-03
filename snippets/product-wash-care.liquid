@@ -1,0 +1,95 @@
+{% liquid
+assign care = product.metafields.custom.wash_care.value
+%}
+
+{% if care %}
+
+<section class="pt-care">
+
+<div class="pt-care-header">
+
+<p class="pt-section-eyebrow">
+CARE GUIDE
+</p>
+
+<h2 class="pt-section-title">
+Keep it looking new.
+</h2>
+
+</div>
+
+<div class="pt-care-grid">
+
+<div class="pt-care-card">
+
+<div class="pt-care-icon">🧺</div>
+
+<h4>Machine Wash</h4>
+
+<p>
+{% if care.machine_wash %}
+Machine washable
+{% else %}
+Hand wash only
+{% endif %}
+</p>
+
+</div>
+
+<div class="pt-care-card">
+
+<div class="pt-care-icon">🌡</div>
+
+<h4>Temperature</h4>
+
+<p>{{ care.water_temperature }}</p>
+
+</div>
+
+<div class="pt-care-card">
+
+<div class="pt-care-icon">☀</div>
+
+<h4>Drying</h4>
+
+<p>{{ care.drying }}</p>
+
+</div>
+
+<div class="pt-care-card">
+
+<div class="pt-care-icon">🚫</div>
+
+<h4>Bleach</h4>
+
+<p>{{ care.bleach }}</p>
+
+</div>
+
+<div class="pt-care-card">
+
+<div class="pt-care-icon">🧼</div>
+
+<h4>Iron</h4>
+
+<p>{{ care.iron }}</p>
+
+</div>
+
+</div>
+
+{% if care.notes != blank %}
+
+<div class="pt-care-notes">
+
+<strong>Extra Care</strong>
+
+<p>{{ care.notes }}</p>
+
+</div>
+
+{% endif %}
+
+</section>
+
+{% endif %}
