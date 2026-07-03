@@ -1,0 +1,93 @@
+{% liquid
+  assign material = product.metafields.custom.material.value
+%}
+
+{% if material %}
+
+<section class="pt-material">
+
+    <div class="pt-material-header">
+
+        <p class="pt-section-eyebrow">
+            THE FABRIC
+        </p>
+
+        <h2 class="pt-section-title">
+            {{ material.name }}
+        </h2>
+
+    </div>
+
+    <div class="pt-material-layout">
+
+        {% if material.image != blank %}
+
+        <div class="pt-material-image">
+
+            <img
+                src="{{ material.image.value | image_url: width: 700 }}"
+                alt="{{ material.name }}"
+                loading="lazy"
+            >
+
+        </div>
+
+        {% endif %}
+
+        <div class="pt-material-content">
+
+            <p class="pt-material-description">
+
+                {{ material.description }}
+
+            </p>
+
+            {% if material.benefits != blank %}
+
+            <ul class="pt-material-benefits">
+
+                {% for benefit in material.benefits.value %}
+
+                    <li>
+
+                        <span class="pt-check">
+
+                            ✓
+
+                        </span>
+
+                        {{ benefit }}
+
+                    </li>
+
+                {% endfor %}
+
+            </ul>
+
+            {% endif %}
+
+            {% if material.country != blank %}
+
+            <div class="pt-material-country">
+
+                Made in {{ material.country }}
+
+            </div>
+
+            {% endif %}
+
+            <a
+                class="pt-fabric-link"
+                href="/pages/fabric-story">
+
+                Read the Fabric Story →
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endif %}
