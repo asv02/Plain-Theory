@@ -1512,3 +1512,91 @@ a.product__text {
     border: none;
   }
 }
+
+/*==================================================
+PLAIN THREAD PRODUCT PAGE
+==================================================*/
+
+@media screen and (min-width:990px){
+
+.product__media-wrapper{
+    position:sticky;
+    top:2rem;
+}
+
+.product__media-list{
+    display:block;
+}
+
+.product__media-item{
+    display:none;
+}
+
+.product__media-item.is-active{
+    display:block;
+}
+
+.product__media{
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.product__media img{
+    border-radius:18px;
+}
+
+.thumbnail-slider{
+    margin-top:18px;
+}
+
+.thumbnail-list{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+}
+
+.thumbnail{
+    border-radius:10px;
+    overflow:hidden;
+    transition:.25s;
+}
+
+.thumbnail:hover{
+    transform:translateY(-3px);
+}
+
+.product__info-container{
+    max-width:520px;
+    margin-left:auto;
+    position:sticky;
+    top:2rem;
+}
+
+.slider-buttons{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    justify-content:space-between;
+    pointer-events:none;
+    padding:0 20px;
+    z-index:10;
+}
+
+.slider-button{
+    pointer-events:auto;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:white;
+    border:1px solid rgba(0,0,0,.08);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.slider-counter{
+    display:none;
+}
+
+}
