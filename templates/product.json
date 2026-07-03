@@ -55,20 +55,6 @@
             "share_label": "Share"
           }
         },
-        "text_y8RaEV": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.features | metafield_text: field: 'title' }}",
-            "text_style": "body"
-          }
-        },
-        "text_WQQKhx": {
-          "type": "text",
-          "settings": {
-            "text": "{{ product.metafields.custom.wash_care | metafield_text: field: 'drying' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'iron' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'bleach' }}{{ product.metafields.custom.wash_care | metafield_text: field: 'water_temperature' }}",
-            "text_style": "body"
-          }
-        },
         "complementary_KgrgPG": {
           "type": "complementary",
           "settings": {
@@ -92,8 +78,6 @@
         "buy_buttons",
         "description",
         "share",
-        "text_y8RaEV",
-        "text_WQQKhx",
         "complementary_KgrgPG"
       ],
       "settings": {
