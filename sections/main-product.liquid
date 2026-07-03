@@ -684,7 +684,12 @@
         </section>
       </div>
     </div>
-
+    <div class="page-width pt-product-details">
+      {% render 'product-feature-cards', product: product %}
+      {% render 'product-material', product: product %}
+      {% render 'product-wash-care', product: product %}
+      {% render 'product-trust-badges' %}
+    </div>
     {% render 'product-media-modal', variant_images: variant_images %}
 
     {% assign popups = section.blocks | where: 'type', 'popup' %}
