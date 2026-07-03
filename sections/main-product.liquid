@@ -10,6 +10,7 @@
   {% endif %}
 >
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+  {{ 'plain-thread-product.css' | asset_url | stylesheet_tag }}
   {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
   {{ 'component-price.css' | asset_url | stylesheet_tag }}
   {{ 'component-slider.css' | asset_url | stylesheet_tag }}
@@ -676,10 +677,14 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
-          <a href="{{ product.url }}" class="link product__view-details animate-arrow">
-            {{ 'products.product.view_full_details' | t }}
-            {{- 'icon-arrow.svg' | inline_asset_content -}}
-          </a>
+      {% render 'product-feature-cards', product: product %}
+      {% render 'product-material', product: product %}
+      {% render 'product-wash-care', product: product %}
+      {% render 'product-trust-badges' %}
+      <a href="{{ product.url }}" class="link product__view-details animate-arrow">
+        {{ 'products.product.view_full_details' | t }}
+        {{- 'icon-arrow.svg' | inline_asset_content -}}
+      </a>
         </section>
       </div>
     </div>
