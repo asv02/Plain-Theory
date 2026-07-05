@@ -1574,6 +1574,44 @@ a.product__text {
 
 }
 
+.product__media-wrapper .thumbnail:hover{
+
+    opacity:.85;
+
+}
+
+.product__media-wrapper .thumbnail[aria-current]{
+
+    box-shadow:none;
+
+    border:2px solid #111;
+
+}
+
+.product__media-wrapper .slider-button{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    border:1px solid #e7e7e7;
+
+    background:#fff;
+
+    transition:.2s ease;
+
+}
+
+.product__media-wrapper .slider-button:hover{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
 /* ==========================================
    Plain Thread Desktop Layout
 ========================================== */
