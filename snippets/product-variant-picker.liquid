@@ -44,7 +44,15 @@
         </fieldset>
       {%- elsif picker_type == 'button' -%}
         <fieldset class="js product-form__input product-form__input--pill">
-          <legend class="form__label">{{ option.name }}</legend>
+          <legend class="form__label">
+            {{ option.name }}
+
+            {% if option.name == 'Size' or option.name == 'SIZE' %}
+              <a href="/pages/size-guide" class="pt-size-guide">
+                Size Guide
+              </a>
+            {% endif %}
+          </legend>
           {% render 'product-variant-options',
             product: product,
             option: option,
