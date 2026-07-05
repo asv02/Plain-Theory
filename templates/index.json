@@ -100,11 +100,12 @@
     "fabric_story_FmPpYc": {
       "type": "fabric-story",
       "name": "Fabric story",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/220_GSm.png"
+      }
     },
     "reviews_qakPbw": {
       "type": "reviews",
-      "name": "Reviews",
       "blocks": {
         "review_1": {
           "type": "review",
@@ -133,6 +134,7 @@
         "review_2",
         "review_3"
       ],
+      "name": "Reviews",
       "settings": {}
     },
     "email_capture_7eqgJq": {
@@ -151,4 +153,3 @@
     "email_capture_7eqgJq"
   ]
 }
-
