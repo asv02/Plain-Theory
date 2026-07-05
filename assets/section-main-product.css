@@ -1971,3 +1971,11 @@ border-color:var(--pt-border-hover)!important;
   cursor:not-allowed;
 
 }
+
+.quantity__button:active,
+.product-form__submit:active,
+.shopify-payment-button__button:active{
+
+filter:brightness(.97);
+
+}
