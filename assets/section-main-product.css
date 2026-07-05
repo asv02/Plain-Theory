@@ -1517,15 +1517,28 @@ a.product__text {
   Plain Thread Design Tokens
 ==================================================*/
 
-:root {
-  --pt-radius: 12px;
-  --pt-border: #eaeaea;
-  --pt-border-hover: #d8d8d8;
-  --pt-text: #111;
-  --pt-text-muted: #6f6f6f;
-  --pt-transition: .25s cubic-bezier(.4,0,.2,1);
-}
+:root{
 
+  /* Radius */
+  --pt-radius-sm:8px;
+  --pt-radius:12px;
+  --pt-radius-lg:16px;
+
+  /* Colors */
+  --pt-text:#111;
+  --pt-text-muted:#6F6F6F;
+
+  --pt-border:#EAEAEA;
+  --pt-border-hover:#D6D6D6;
+
+  --pt-bg:#FFF;
+  --pt-bg-soft:#F7F7F7;
+
+  /* Motion */
+
+  --pt-transition:.25s cubic-bezier(.4,0,.2,1);
+
+}
 
 /* =========================================
    Plain Thread Gallery
