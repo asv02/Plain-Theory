@@ -1802,8 +1802,16 @@ a.product__text {
   transition: border-color .25s ease;
 }
 
-.quantity:hover {
-  border-color: #cfcfcf;
+.quantity:hover{
+
+border-color:var(--pt-border-hover);
+
+}
+
+.quantity__button:hover{
+
+background:var(--pt-bg-soft);
+
 }
 
 .quantity__button {
