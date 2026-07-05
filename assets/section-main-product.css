@@ -1540,6 +1540,31 @@ a.product__text {
 
 }
 
+/* ======================================
+   Plain Thread Motion System
+====================================== */
+
+.quantity,
+.quantity__button,
+.product-form__submit,
+.shopify-payment-button__button,
+.slider-button,
+.thumbnail{
+
+    transition:
+
+      background-color var(--pt-transition),
+
+      border-color var(--pt-transition),
+
+      color var(--pt-transition),
+
+      opacity var(--pt-transition),
+
+      box-shadow var(--pt-transition);
+
+}
+
 /* =========================================
    Plain Thread Gallery
 ========================================= */
