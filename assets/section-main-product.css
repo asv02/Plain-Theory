@@ -2289,3 +2289,246 @@ height:34px;
 }
 
 }
+
+/*==================================================
+  Plain Thread — PR-5
+  Material Story
+==================================================*/
+
+.pt-material{
+
+    margin:10rem auto;
+
+    max-width:1240px;
+
+    padding:0 2rem;
+
+}
+
+/* Header */
+
+.pt-material-header{
+
+    margin-bottom:5rem;
+
+}
+
+.pt-material .pt-section-title{
+
+    max-width:680px;
+
+}
+
+/* Layout */
+
+.pt-material-layout{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:8rem;
+
+    align-items:center;
+
+}
+
+/* Image */
+
+.pt-material-image{
+
+    overflow:hidden;
+
+    border-radius:var(--pt-radius-lg);
+
+    background:var(--pt-bg-soft);
+
+}
+
+.pt-material-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.pt-material:hover .pt-material-image img{
+
+    transform:scale(1.02);
+
+}
+
+/* Description */
+
+.pt-material-description{
+
+    margin:0 0 3.6rem;
+
+    font-size:1.7rem;
+
+    line-height:1.9;
+
+    color:var(--pt-text-muted);
+
+    max-width:48rem;
+
+}
+
+/* Benefits */
+
+.pt-material-benefits{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.pt-material-benefits li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1.4rem;
+
+    padding:1.8rem 0;
+
+    border-top:1px solid var(--pt-border);
+
+    font-size:1.55rem;
+
+}
+
+.pt-material-benefits li:last-child{
+
+    border-bottom:1px solid var(--pt-border);
+
+}
+
+.pt-check{
+
+    width:24px;
+
+    flex:0 0 24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    color:var(--pt-text);
+
+    font-weight:600;
+
+}
+
+/* Country */
+
+.pt-material-country{
+
+    margin:3.2rem 0 2.8rem;
+
+    font-size:1.45rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:var(--pt-text-muted);
+
+}
+
+/* Link */
+
+.pt-fabric-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-top:1rem;
+
+    color:var(--pt-text);
+
+    font-weight:500;
+
+    text-decoration:none;
+
+}
+
+.pt-fabric-link span:first-child{
+
+    position:relative;
+
+}
+
+.pt-fabric-link span:first-child::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:100%;
+
+    height:1px;
+
+    background:currentColor;
+
+    transform:scaleX(1);
+
+    transform-origin:left;
+
+}
+
+.pt-link-arrow{
+
+    transition:transform var(--pt-transition);
+
+}
+
+.pt-fabric-link:hover .pt-link-arrow{
+
+    transform:translateX(4px);
+
+}
+
+/* Mobile */
+
+@media (max-width:989px){
+
+.pt-material{
+
+margin:7rem auto;
+
+}
+
+.pt-material-layout{
+
+grid-template-columns:1fr;
+
+gap:4rem;
+
+}
+
+.pt-material-description{
+
+max-width:100%;
+
+}
+
+}
