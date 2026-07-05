@@ -814,16 +814,6 @@ CARE GUIDE
 
 }
 
-.pt-care-card:hover{
-
-    transform:translateY(-4px);
-
-    border-color:var(--pt-border-hover);
-
-    box-shadow:0 12px 30px rgba(0,0,0,.04);
-
-}
-
 .pt-care-icon{
 
     width:5.4rem;
