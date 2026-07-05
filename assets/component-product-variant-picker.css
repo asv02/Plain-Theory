@@ -240,3 +240,22 @@ variant-selects {
   }
 }
 /* End custom styles for Swatch display type */
+
+.pt-stock-status{
+    margin-top:12px;
+    margin-bottom:20px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.pt-stock-status .in-stock{
+    color:#0d8b48;
+}
+
+.pt-stock-status .low-stock{
+    color:#c97b00;
+}
+
+.pt-stock-status .sold-out{
+    color:#c63b3b;
+}
