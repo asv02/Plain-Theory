@@ -1552,6 +1552,12 @@ a.product__text {
 
 }
 
+.product__media-wrapper .thumbnail-list{
+
+    gap:12px;
+
+}
+
 /* ==========================================
    Plain Thread Desktop Layout
 ========================================== */
