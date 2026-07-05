@@ -1708,11 +1708,26 @@ filter:brightness(.97);
 
 }
 
+.product__media-wrapper .slider-button{
+
+width:42px;
+height:42px;
+
+border-radius:50%;
+
+border:1px solid var(--pt-border);
+
+background:#fff;
+
+color:var(--pt-text);
+
+}
+
 .product__media-wrapper .slider-button:hover{
 
-    background:#111;
+background:var(--pt-bg-soft);
 
-    color:#fff;
+border-color:var(--pt-border-hover);
 
 }
 
