@@ -526,6 +526,256 @@ FEATURES
     color:#666;
 }
 
+
+/*==================================================
+  Plain Thread — PR-4
+  Feature Highlights
+==================================================*/
+
+.pt-features{
+
+    margin:9rem auto;
+
+    max-width:1240px;
+
+    padding:0 2rem;
+
+}
+
+/* Heading */
+
+.pt-section-heading{
+
+    margin-bottom:5rem;
+
+}
+
+.pt-section-eyebrow{
+
+    font-size:1.2rem;
+
+    font-weight:500;
+
+    letter-spacing:.22em;
+
+    text-transform:uppercase;
+
+    color:var(--pt-text-muted);
+
+    margin-bottom:1.4rem;
+
+}
+
+.pt-section-title{
+
+    font-size:clamp(3rem,2.5vw,4.2rem);
+
+    line-height:1.18;
+
+    font-weight:400;
+
+    letter-spacing:-.03em;
+
+    max-width:620px;
+
+    margin:0;
+
+}
+
+/* Grid */
+
+.pt-feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:3rem 5rem;
+
+}
+
+/* Feature */
+
+.pt-feature-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:2rem;
+
+    padding:3rem 0;
+
+    border-top:1px solid var(--pt-border);
+
+}
+
+.pt-feature-card:last-child{
+
+    border-bottom:1px solid var(--pt-border);
+
+}
+
+/* Icon */
+
+.pt-feature-icon{
+
+    flex:0 0 48px;
+
+    width:48px;
+
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.pt-feature-icon img{
+
+    width:40px;
+
+    height:40px;
+
+    object-fit:contain;
+
+}
+
+/* Text */
+
+.pt-feature-content{
+
+    flex:1;
+
+}
+
+.pt-feature-content h3{
+
+    margin:0 0 .8rem;
+
+    font-size:2rem;
+
+    font-weight:500;
+
+    line-height:1.3;
+
+    color:var(--pt-text);
+
+}
+
+.pt-feature-content p{
+
+    margin:0;
+
+    font-size:1.55rem;
+
+    line-height:1.75;
+
+    color:var(--pt-text-muted);
+
+    max-width:38rem;
+
+}
+
+/* Hover */
+
+@media (hover:hover){
+
+.pt-feature-card{
+
+transition:
+
+transform .3s ease,
+
+border-color .3s ease;
+
+}
+
+.pt-feature-card:hover{
+
+transform:translateX(4px);
+
+border-color:#CFCFCF;
+
+}
+
+}
+
+/* Tablet */
+
+@media(max-width:989px){
+
+.pt-feature-grid{
+
+grid-template-columns:1fr;
+
+gap:0;
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:749px){
+
+.pt-features{
+
+margin:6rem auto;
+
+padding:0 1.8rem;
+
+}
+
+.pt-section-title{
+
+font-size:2.8rem;
+
+}
+
+.pt-feature-card{
+
+padding:2.4rem 0;
+
+gap:1.6rem;
+
+}
+
+.pt-feature-content h3{
+
+font-size:1.8rem;
+
+}
+
+.pt-feature-content p{
+
+font-size:1.45rem;
+
+}
+
+.pt-feature-icon{
+
+width:40px;
+
+height:40px;
+
+flex-basis:40px;
+
+}
+
+.pt-feature-icon img{
+
+width:34px;
+
+height:34px;
+
+}
+
+}
+
 /*==================================================
 MATERIAL
 ==================================================*/
@@ -611,6 +861,321 @@ MATERIAL
 
 .pt-fabric-link:hover{
     letter-spacing:.04em;
+}
+
+/*==================================================
+  Plain Thread — PR-5
+  Material Story
+==================================================*/
+
+.pt-material{
+
+    margin:10rem auto;
+
+    max-width:1240px;
+
+    padding:0 2rem;
+
+}
+
+/* Header */
+
+.pt-material-header{
+
+    margin-bottom:5rem;
+
+}
+
+.pt-material .pt-section-title{
+
+    max-width:680px;
+
+}
+
+/* Layout */
+
+.pt-material-layout{
+
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:8rem;
+
+    align-items:center;
+
+}
+
+/* Image */
+
+.pt-material-image{
+
+    overflow:hidden;
+
+    border-radius:var(--pt-radius-lg);
+
+    background:var(--pt-bg-soft);
+
+}
+
+.pt-material-image img{
+
+    display:block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:transform .8s cubic-bezier(.2,.8,.2,1);
+
+}
+
+.pt-material:hover .pt-material-image img{
+
+    transform:scale(1.02);
+
+}
+
+/* Description */
+
+.pt-material-description{
+
+    margin:0 0 3.6rem;
+
+    font-size:1.7rem;
+
+    line-height:1.9;
+
+    color:var(--pt-text-muted);
+
+    max-width:48rem;
+
+}
+
+/* Benefits */
+
+.pt-material-benefits{
+
+    margin:0;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+.pt-material-benefits li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:1.4rem;
+
+    padding:1.8rem 0;
+
+    border-top:1px solid var(--pt-border);
+
+    font-size:1.55rem;
+
+}
+
+.pt-material-benefits li:last-child{
+
+    border-bottom:1px solid var(--pt-border);
+
+}
+
+.pt-check{
+
+    width:24px;
+
+    flex:0 0 24px;
+
+    display:flex;
+
+    justify-content:center;
+
+    color:var(--pt-text);
+
+    font-weight:600;
+
+}
+
+/* Country */
+
+.pt-material-country{
+
+    margin:3.2rem 0 2.8rem;
+
+    font-size:1.45rem;
+
+    letter-spacing:.08em;
+
+    text-transform:uppercase;
+
+    color:var(--pt-text-muted);
+
+}
+
+/* Link */
+
+.pt-fabric-link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-top:1rem;
+
+    color:var(--pt-text);
+
+    font-weight:500;
+
+    text-decoration:none;
+
+}
+
+.pt-fabric-link span:first-child{
+
+    position:relative;
+
+}
+
+.pt-fabric-link span:first-child::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-4px;
+
+    width:100%;
+
+    height:1px;
+
+    background:currentColor;
+
+    transform:scaleX(1);
+
+    transform-origin:left;
+
+}
+
+.pt-link-arrow{
+
+    transition:transform var(--pt-transition);
+
+}
+
+.pt-fabric-link:hover .pt-link-arrow{
+
+    transform:translateX(4px);
+
+}
+
+/* Mobile */
+
+@media (max-width:989px){
+
+.pt-material{
+
+margin:7rem auto;
+
+}
+
+.pt-material-layout{
+
+grid-template-columns:1fr;
+
+gap:4rem;
+
+}
+
+.pt-material-description{
+
+max-width:100%;
+
+}
+
+}
+
+/*==================================================
+  Plain Thread — PR-6
+  Editorial Feature Highlights
+==================================================*/
+
+.pt-feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    column-gap:6rem;
+    row-gap:0;
+}
+
+.pt-feature-card{
+    display:flex;
+    align-items:flex-start;
+    gap:2rem;
+    padding:4rem 0;
+    border-top:1px solid var(--pt-border);
+    background:none;
+    border-radius:0;
+    box-shadow:none;
+}
+
+.pt-feature-card:last-child{
+    border-bottom:1px solid var(--pt-border);
+}
+
+.pt-feature-icon{
+    width:40px;
+    flex:0 0 40px;
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    padding-top:.2rem;
+}
+
+.pt-feature-icon img{
+    width:28px;
+    height:28px;
+    object-fit:contain;
+    filter:grayscale(100%);
+    opacity:.9;
+}
+
+.pt-feature-content h3{
+    font-size:2rem;
+    font-weight:500;
+    line-height:1.35;
+    margin:0 0 1rem;
+    letter-spacing:-0.02em;
+}
+
+.pt-feature-content p{
+    font-size:1.55rem;
+    line-height:1.8;
+    color:#555;
+    margin:0;
+    max-width:38rem;
+}
+
+@media(max-width:989px){
+
+.pt-feature-grid{
+grid-template-columns:1fr;
+}
+
+.pt-feature-card{
+padding:3rem 0;
+}
+
 }
 
 /*==================================================
