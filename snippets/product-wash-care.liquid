@@ -1,94 +1,150 @@
 {% liquid
-assign care = product.metafields.custom.wash_care.value
+  assign care = product.metafields.custom.wash_care.value
 %}
 
 {% if care %}
 
 <section class="pt-care">
 
-<div class="pt-care-header">
+  <div class="pt-care-header">
 
-<p class="pt-section-eyebrow">
-CARE GUIDE
-</p>
+    <p class="pt-section-eyebrow">
+      CARE GUIDE
+    </p>
 
-<h2 class="pt-section-title">
-Keep it looking new.
-</h2>
+    <h2 class="pt-section-title">
+      Keep it looking new.
+    </h2>
 
-</div>
+  </div>
 
-<div class="pt-care-grid">
+  <div class="pt-care-grid">
 
-<div class="pt-care-card">
+    <!-- Machine Wash -->
 
-<div class="pt-care-icon">🧺</div>
+    <article class="pt-care-card">
 
-<h4>Machine Wash</h4>
+      <div class="pt-care-icon">
+        🧺
+      </div>
 
-<p>
-{% if care.machine_wash %}
-Machine washable
-{% else %}
-Hand wash only
-{% endif %}
-</p>
+      <div class="pt-care-content">
 
-</div>
+        <h4>Machine Wash</h4>
 
-<div class="pt-care-card">
+        <p>
+          {% if care.machine_wash %}
+            Machine washable
+          {% else %}
+            Hand wash only
+          {% endif %}
+        </p>
 
-<div class="pt-care-icon">🌡</div>
+      </div>
 
-<h4>Temperature</h4>
+    </article>
 
-<p>{{ care.water_temperature }}</p>
+    <!-- Temperature -->
 
-</div>
+    {% if care.water_temperature != blank %}
 
-<div class="pt-care-card">
+    <article class="pt-care-card">
 
-<div class="pt-care-icon">☀</div>
+      <div class="pt-care-icon">
+        🌡
+      </div>
 
-<h4>Drying</h4>
+      <div class="pt-care-content">
 
-<p>{{ care.drying }}</p>
+        <h4>Temperature</h4>
 
-</div>
+        <p>{{ care.water_temperature }}</p>
 
-<div class="pt-care-card">
+      </div>
 
-<div class="pt-care-icon">🚫</div>
+    </article>
 
-<h4>Bleach</h4>
+    {% endif %}
 
-<p>{{ care.bleach }}</p>
+    <!-- Drying -->
 
-</div>
+    {% if care.drying != blank %}
 
-<div class="pt-care-card">
+    <article class="pt-care-card">
 
-<div class="pt-care-icon">🧼</div>
+      <div class="pt-care-icon">
+        ☀
+      </div>
 
-<h4>Iron</h4>
+      <div class="pt-care-content">
 
-<p>{{ care.iron }}</p>
+        <h4>Drying</h4>
 
-</div>
+        <p>{{ care.drying }}</p>
 
-</div>
+      </div>
 
-{% if care.notes != blank %}
+    </article>
 
-<div class="pt-care-notes">
+    {% endif %}
 
-<strong>Extra Care</strong>
+    <!-- Bleach -->
 
-<p>{{ care.notes }}</p>
+    {% if care.bleach != blank %}
 
-</div>
+    <article class="pt-care-card">
 
-{% endif %}
+      <div class="pt-care-icon">
+        🚫
+      </div>
+
+      <div class="pt-care-content">
+
+        <h4>Bleach</h4>
+
+        <p>{{ care.bleach }}</p>
+
+      </div>
+
+    </article>
+
+    {% endif %}
+
+    <!-- Iron -->
+
+    {% if care.iron != blank %}
+
+    <article class="pt-care-card">
+
+      <div class="pt-care-icon">
+        🧼
+      </div>
+
+      <div class="pt-care-content">
+
+        <h4>Iron</h4>
+
+        <p>{{ care.iron }}</p>
+
+      </div>
+
+    </article>
+
+    {% endif %}
+
+  </div>
+
+  {% if care.notes != blank %}
+
+    <div class="pt-care-notes">
+
+      <strong>Extra Care</strong>
+
+      <p>{{ care.notes }}</p>
+
+    </div>
+
+  {% endif %}
 
 </section>
 
