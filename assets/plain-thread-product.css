@@ -723,7 +723,7 @@ PLAIN THREAD CARD SYSTEM
 
     border:1px solid var(--pt-border);
 
-    border-radius:var(--pt-radius-lg);
+    border-radius:20px;
 
 transition:
     border-color .28s ease,
