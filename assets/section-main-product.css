@@ -1723,3 +1723,51 @@ a.product__text {
   }
 
 }
+
+/*==================================================
+  Plain Thread — Buy Box (PR-2)
+  Quantity Selector
+==================================================*/
+
+.product-form__quantity {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.quantity__label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: .02em;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.quantity {
+  min-height: 56px;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  background: #fff;
+  transition: border-color .25s ease;
+}
+
+.quantity:hover {
+  border-color: #cfcfcf;
+}
+
+.quantity__button {
+  width: 56px;
+  transition: background .2s ease;
+}
+
+.quantity__button:hover {
+  background: #f6f6f6;
+}
+
+.quantity__button .svg-wrapper {
+  transform: scale(.9);
+}
+
+.quantity__input {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
