@@ -1963,7 +1963,9 @@ background:var(--pt-bg-soft);
 
 .product-form__submit.loading{
 
-  opacity:.85;
+pointer-events:none;
+
+cursor:wait;
 
 }
 
