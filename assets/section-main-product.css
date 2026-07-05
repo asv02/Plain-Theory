@@ -1535,8 +1535,16 @@ a.product__text {
   --pt-bg-soft:#F7F7F7;
 
   /* Motion */
-
   --pt-transition:.25s cubic-bezier(.4,0,.2,1);
+
+  /* Spacing */
+  --pt-space-1:.4rem;
+  --pt-space-2:.8rem;
+  --pt-space-3:1.2rem;
+  --pt-space-4:1.6rem;
+  --pt-space-5:2.4rem;
+  --pt-space-6:3.2rem;
+  --pt-space-7:4.8rem;
 
 }
 
