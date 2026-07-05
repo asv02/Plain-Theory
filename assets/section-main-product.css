@@ -1530,9 +1530,11 @@ a.product__text {
   }
 
   .product__media img {
-    display: block;
-    width: 100%;
-    border-radius: inherit;
+      display:block;
+      width:100%;
+      max-height:78vh;
+      object-fit:contain;
+      border-radius:inherit;
   }
 
   .thumbnail-slider {
@@ -1547,5 +1549,31 @@ a.product__text {
     border-radius: 10px;
     overflow: hidden;
   }
+
+}
+
+/* ==========================================
+   Plain Thread Desktop Layout
+========================================== */
+
+@media screen and (min-width:990px){
+
+.product--large:not(.product--no-media) .product__media-wrapper{
+
+    width:calc(60% - var(--grid-desktop-horizontal-spacing)/2);
+
+    max-width:60%;
+
+}
+
+.product--large:not(.product--no-media) .product__info-wrapper{
+
+    width:calc(40% - var(--grid-desktop-horizontal-spacing)/2);
+
+    max-width:40%;
+
+    padding-left:5rem;
+
+}
 
 }
