@@ -1548,9 +1548,9 @@ a.product__text {
 
 }
 
-/* ======================================
-   Plain Thread Motion System
-====================================== */
+/*==================================================
+  Plain Thread Motion System
+==================================================*/
 
 .quantity,
 .quantity__button,
@@ -1559,17 +1559,61 @@ a.product__text {
 .slider-button,
 .thumbnail{
 
-    transition:
+transition:
 
-      background-color var(--pt-transition),
+background-color var(--pt-transition),
 
-      border-color var(--pt-transition),
+border-color var(--pt-transition),
 
-      color var(--pt-transition),
+color var(--pt-transition),
 
-      opacity var(--pt-transition),
+opacity var(--pt-transition),
 
-      box-shadow var(--pt-transition);
+box-shadow var(--pt-transition),
+
+filter var(--pt-transition);
+
+}
+
+.quantity:hover{
+
+border-color:var(--pt-border-hover);
+
+}
+
+.quantity:focus-within{
+
+border-color:var(--pt-text);
+
+box-shadow:0 0 0 4px rgba(17,17,17,.05);
+
+}
+
+.quantity__button:hover{
+
+background:var(--pt-bg-soft);
+
+}
+
+.product-form__submit:hover{
+
+background:#2A2A2A;
+
+}
+
+.shopify-payment-button__button:hover{
+
+background:var(--pt-bg-soft)!important;
+
+border-color:var(--pt-border-hover)!important;
+
+}
+
+.quantity__button:active,
+.product-form__submit:active,
+.shopify-payment-button__button:active{
+
+filter:brightness(.97);
 
 }
 
@@ -1820,11 +1864,6 @@ border-color:var(--pt-border-hover);
 
 background:var(--pt-bg-soft);
 
-}
-
-.quantity__button {
-  width: 56px;
-  transition: background .2s ease;
 }
 
 .quantity__button:hover {
