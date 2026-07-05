@@ -3,149 +3,90 @@
 %}
 
 {% if care %}
+  <section class="pt-care">
+    <div class="pt-care-header">
+      <p class="pt-section-eyebrow">CARE GUIDE</p>
 
-<section class="pt-care">
-
-  <div class="pt-care-header">
-
-    <p class="pt-section-eyebrow">
-      CARE GUIDE
-    </p>
-
-    <h2 class="pt-section-title">
-      Keep it looking new.
-    </h2>
-
-  </div>
-
-  <div class="pt-care-grid">
-
-    <!-- Machine Wash -->
-
-    <article class="pt-care-card">
-
-      <div class="pt-care-icon">
-        🧺
-      </div>
-
-      <div class="pt-care-content">
-
-        <h4>Machine Wash</h4>
-
-        <p>
-          {% if care.machine_wash %}
-            Machine washable
-          {% else %}
-            Hand wash only
-          {% endif %}
-        </p>
-
-      </div>
-
-    </article>
-
-    <!-- Temperature -->
-
-    {% if care.water_temperature != blank %}
-
-    <article class="pt-care-card">
-
-      <div class="pt-care-icon">
-        🌡
-      </div>
-
-      <div class="pt-care-content">
-
-        <h4>Temperature</h4>
-
-        <p>{{ care.water_temperature }}</p>
-
-      </div>
-
-    </article>
-
-    {% endif %}
-
-    <!-- Drying -->
-
-    {% if care.drying != blank %}
-
-    <article class="pt-care-card">
-
-      <div class="pt-care-icon">
-        ☀
-      </div>
-
-      <div class="pt-care-content">
-
-        <h4>Drying</h4>
-
-        <p>{{ care.drying }}</p>
-
-      </div>
-
-    </article>
-
-    {% endif %}
-
-    <!-- Bleach -->
-
-    {% if care.bleach != blank %}
-
-    <article class="pt-care-card">
-
-      <div class="pt-care-icon">
-        🚫
-      </div>
-
-      <div class="pt-care-content">
-
-        <h4>Bleach</h4>
-
-        <p>{{ care.bleach }}</p>
-
-      </div>
-
-    </article>
-
-    {% endif %}
-
-    <!-- Iron -->
-
-    {% if care.iron != blank %}
-
-    <article class="pt-care-card">
-
-      <div class="pt-care-icon">
-        🧼
-      </div>
-
-      <div class="pt-care-content">
-
-        <h4>Iron</h4>
-
-        <p>{{ care.iron }}</p>
-
-      </div>
-
-    </article>
-
-    {% endif %}
-
-  </div>
-
-  {% if care.notes != blank %}
-
-    <div class="pt-care-notes">
-
-      <strong>Extra Care</strong>
-
-      <p>{{ care.notes }}</p>
-
+      <h2 class="pt-section-title">Keep it looking new.</h2>
     </div>
 
-  {% endif %}
+    <div class="pt-care-grid">
+      <!-- Machine Wash -->
+      <article class="pt-care-card">
+        <div class="pt-care-icon">🧺</div>
 
-</section>
+        <div class="pt-care-content">
+          <h4>Machine Wash</h4>
 
+          <p>
+            {% if care.machine_wash %}
+              Machine wash
+            {% else %}
+              Hand wash only
+            {% endif %}
+          </p>
+        </div>
+      </article>
+
+      <!-- Temperature -->
+      <article class="pt-care-card">
+        <div class="pt-care-icon">🌡️</div>
+
+        <div class="pt-care-content">
+          <h4>Temperature</h4>
+
+          <p>
+            {{ care.water_temperature | default: '30°C or below' }}
+          </p>
+        </div>
+      </article>
+
+      <!-- Drying -->
+      <article class="pt-care-card">
+        <div class="pt-care-icon">☀️</div>
+
+        <div class="pt-care-content">
+          <h4>Drying</h4>
+
+          <p>
+            {{ care.drying | default: 'Air dry flat' }}
+          </p>
+        </div>
+      </article>
+
+      <!-- Bleach -->
+      <article class="pt-care-card">
+        <div class="pt-care-icon">🚫</div>
+
+        <div class="pt-care-content">
+          <h4>Bleach</h4>
+
+          <p>
+            {{ care.bleach | default: 'Do not bleach' }}
+          </p>
+        </div>
+      </article>
+
+      <!-- Iron -->
+      <article class="pt-care-card">
+        <div class="pt-care-icon">🧼</div>
+
+        <div class="pt-care-content">
+          <h4>Iron</h4>
+
+          <p>
+            {{ care.iron | default: 'Low heat only' }}
+          </p>
+        </div>
+      </article>
+    </div>
+
+    {% if care.notes != blank %}
+      <div class="pt-care-notes">
+        <strong>Extra Care</strong>
+
+        <p>{{ care.notes }}</p>
+      </div>
+    {% endif %}
+  </section>
 {% endif %}
