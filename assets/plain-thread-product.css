@@ -944,7 +944,7 @@ MOBILE
 .pt-feature-card,
 .pt-care-card,
 .pt-trust-card{
-    padding:22px;
+    padding:var(--pt-space-5);
 }
 
 .pt-feature-icon,
