@@ -1941,9 +1941,9 @@ background:var(--pt-bg-soft);
 
 .shopify-payment-button__button:hover{
 
-  background:var(--pt-bg-soft) !important;
+background:var(--pt-bg-soft)!important;
 
-  border-color:var(--pt-border-hover) !important;
+border-color:var(--pt-border-hover)!important;
 
 }
 
