@@ -1885,9 +1885,6 @@ background:var(--pt-bg-soft);
   background: #f6f6f6;
 }
 
-.quantity__button .svg-wrapper {
-  transform: scale(.9);
-}
 
 .quantity__input {
   font-size: 1.8rem;
