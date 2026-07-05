@@ -479,6 +479,22 @@
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
               {%- when 'buy_buttons' -%}
+                <div class="pt-stock-status" id="StockStatus-{{ section.id }}">
+                  {% assign variant = product.selected_or_first_available_variant %}
+
+                  {% if variant.available %}
+                    {% if variant.inventory_management
+                      and variant.inventory_quantity <= 3
+                      and variant.inventory_quantity > 0
+                    %}
+                      <span class="low-stock"> Only {{ variant.inventory_quantity }} left </span>
+                    {% else %}
+                      <span class="in-stock"> ✓ In Stock </span>
+                    {% endif %}
+                  {% else %}
+                    <span class="sold-out"> Sold Out </span>
+                  {% endif %}
+                </div>
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -677,10 +693,10 @@
                 {% render 'icon-with-text', block: block %}
             {%- endcase -%}
           {%- endfor -%}
-      <a href="{{ product.url }}" class="link product__view-details animate-arrow">
-        {{ 'products.product.view_full_details' | t }}
-        {{- 'icon-arrow.svg' | inline_asset_content -}}
-      </a>
+          <a href="{{ product.url }}" class="link product__view-details animate-arrow">
+            {{ 'products.product.view_full_details' | t }}
+            {{- 'icon-arrow.svg' | inline_asset_content -}}
+          </a>
         </section>
       </div>
     </div>
@@ -2272,4 +2288,3 @@
   ]
 }
 {% endschema %}
-
