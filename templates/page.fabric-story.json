@@ -11,8 +11,12 @@
   "sections": {
     "fabric-story-main": {
       "type": "fabric-story",
-      "settings": {}
+      "settings": {
+        "image": "shopify://shop_images/220_GSm.png"
+      }
     }
   },
-  "order": ["fabric-story-main"]
+  "order": [
+    "fabric-story-main"
+  ]
 }
