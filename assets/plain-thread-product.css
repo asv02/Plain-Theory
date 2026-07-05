@@ -737,13 +737,15 @@ PLAIN THREAD CARD SYSTEM
 .pt-care-card:hover,
 .pt-trust-card:hover{
 
-    transform:translateY(-3px);
+    transform:none;
 
     background:#fff;
 
-    border-color:var(--pt-border-hover);
+    border-color:#dcdcdc;
 
-    box-shadow:0 10px 24px rgba(0,0,0,.05);
+    box-shadow:
+        0 2px 8px rgba(17,17,17,.03),
+        0 8px 20px rgba(17,17,17,.035);
 
 }
 
