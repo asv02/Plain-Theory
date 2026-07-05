@@ -1551,10 +1551,26 @@ a.product__text {
   }
 
 }
-
+/* Thumnails section */
 .product__media-wrapper .thumbnail-list{
 
     gap:12px;
+
+}
+
+.product__media-wrapper .thumbnail-list__item{
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+.product__media-wrapper .thumbnail{
+
+    transition:
+        opacity .25s ease,
+        border-color .25s ease;
 
 }
 
