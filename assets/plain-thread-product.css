@@ -725,11 +725,10 @@ PLAIN THREAD CARD SYSTEM
 
     border-radius:var(--pt-radius-lg);
 
-    transition:
-        transform var(--pt-transition),
-        border-color var(--pt-transition),
-        box-shadow var(--pt-transition),
-        background var(--pt-transition);
+transition:
+    border-color .28s ease,
+    background-color .28s ease,
+    box-shadow .32s cubic-bezier(.2,.8,.2,1);
 
 }
 
