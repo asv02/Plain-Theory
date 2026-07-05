@@ -1060,3 +1060,21 @@ MOBILE
 }
 
 }
+
+.pt-stock-status{
+    margin:18px 0 24px;
+    font-size:14px;
+    font-weight:500;
+}
+
+.pt-stock-status .in-stock{
+    color:#16864f;
+}
+
+.pt-stock-status .low-stock{
+    color:#d18200;
+}
+
+.pt-stock-status .sold-out{
+    color:#c83939;
+}
