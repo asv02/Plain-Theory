@@ -1513,6 +1513,20 @@ a.product__text {
   }
 }
 
+/*==================================================
+  Plain Thread Design Tokens
+==================================================*/
+
+:root {
+  --pt-radius: 12px;
+  --pt-border: #eaeaea;
+  --pt-border-hover: #d8d8d8;
+  --pt-text: #111;
+  --pt-text-muted: #6f6f6f;
+  --pt-transition: .25s cubic-bezier(.4,0,.2,1);
+}
+
+
 /* =========================================
    Plain Thread Gallery
 ========================================= */
