@@ -14,8 +14,37 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "announcement_rAh48t": {
+          "type": "announcement",
+          "settings": {
+            "text": "Nothing Hidden.",
+            "link": ""
+          }
+        },
+        "announcement_CGzxXp": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free shipping across India on all prepaid orders.",
+            "link": ""
+          }
+        },
+        "announcement_FzPQJC": {
+          "type": "announcement",
+          "settings": {
+            "text": "Built for everyday. Designed to last.",
+            "link": ""
+          }
+        },
+        "announcement_hhqwkF": {
+          "type": "announcement",
+          "settings": {
+            "text": "Crafted from 220 GSM combed ring-spun cotton.",
+            "link": "shopify://collections/apparel-accessories-clothing-clothing-tops-t-shirts"
+          }
+        },
         "announcement-bar-0": {
           "type": "announcement",
+          "disabled": true,
           "settings": {
             "text": "220 GSM combed cotton · ₹99 shipping · Free above ₹999",
             "link": ""
@@ -23,10 +52,14 @@
         }
       },
       "block_order": [
+        "announcement_rAh48t",
+        "announcement_CGzxXp",
+        "announcement_FzPQJC",
+        "announcement_hhqwkF",
         "announcement-bar-0"
       ],
       "settings": {
-        "auto_rotate": false,
+        "auto_rotate": true,
         "change_slides_speed": 5,
         "color_scheme": "scheme-1",
         "show_line_separator": true,
