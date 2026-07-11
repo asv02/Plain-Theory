@@ -45,14 +45,14 @@
       ],
       "custom_css": [],
       "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_dfbjsvdfbjsvdfbj.png",
+        "image": "shopify://shop_images/Male_model_wearing_t-shirt_trousers_202607090215.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "zoom-in",
         "desktop_content_position": "middle-center",
         "desktop_content_alignment": "center",
         "show_text_box": false,
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-eedddb39-4b44-42a9-8bea-14d157e74b94",
         "stack_images_on_mobile": false,
         "mobile_content_alignment": "center",
         "show_text_below": false
