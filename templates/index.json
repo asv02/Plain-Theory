@@ -15,21 +15,21 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Dressed down. Dialed in.",
-            "heading_size": "hxl"
+            "heading": "The Essential Oversized Tee",
+            "heading_size": "h0"
           }
         },
         "text_yYwcjk": {
           "type": "text",
           "settings": {
-            "text": "220 GSM combed cotton. Oversized by design. Three colours. One standard.",
+            "text": "Thoughtfully designed for everyday | Crafted to be worn for years.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop the drop",
+            "button_label_1": "Shop the Essential",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "Our Story",
@@ -49,8 +49,8 @@
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "zoom-in",
-        "desktop_content_position": "middle-center",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "middle-left",
+        "desktop_content_alignment": "left",
         "show_text_box": false,
         "color_scheme": "scheme-eedddb39-4b44-42a9-8bea-14d157e74b94",
         "stack_images_on_mobile": false,
