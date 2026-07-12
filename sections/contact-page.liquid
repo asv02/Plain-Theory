@@ -6,7 +6,7 @@
   </div>
 </section>
 
-<section class="pt-ct-body">
+{% comment %} <section class="pt-ct-body">
   <div class="pt-ct-inner">
 
     <div class="pt-ct-info">
@@ -53,6 +53,98 @@
     </div>
 
   </div>
+</section> {% endcomment %}
+<section class="pt-ct-info">
+
+  <div class="pt-ct-card">
+    <p class="pt-ct-card__title">Email</p>
+    <p class="pt-ct-card__body">
+      <a href="mailto:hello@plainthread.in" class="pt-ct-link">
+        hello@plainthread.in
+      </a><br>
+      Questions about orders, products and sizing.
+    </p>
+  </div>
+
+  <div class="pt-ct-card">
+    <p class="pt-ct-card__title">Business Enquiries</p>
+    <p class="pt-ct-card__body">
+      <a href="mailto:support@plainthread.in" class="pt-ct-link">
+        support@plainthread.in
+      </a><br>
+      Collaborations, wholesale and partnerships.
+    </p>
+  </div>
+
+  <div class="pt-ct-card">
+    <p class="pt-ct-card__title">Response Time</p>
+    <p class="pt-ct-card__body">
+      Within 24 hours.<br>
+      Every message is read personally.
+    </p>
+  </div>
+
+</section>
+<section class="pt-ct-business">
+
+  <p class="pt-ct-links__label">Business Information</p>
+
+  <details class="pt-ct-collapse">
+    <summary>Business Name</summary>
+    <p>Plain Thread</p>
+  </details>
+
+  <details class="pt-ct-collapse">
+    <summary>Business Address</summary>
+    <p>
+      309, 3rd Floor, Tower-A of Eleven Bay (SAS Tower)<br>
+      Support Area, Medicity<br>
+      Gurugram, Haryana – 122001
+    </p>
+  </details>
+
+  <details class="pt-ct-collapse">
+    <summary>Email</summary>
+    <p>hello@plainthread.in</p>
+  </details>
+
+  <details class="pt-ct-collapse">
+    <summary>GSTIN</summary>
+    <p>06ABJFP4213A1ZR</p>
+  </details>
+
+  <details class="pt-ct-collapse">
+    <summary>Working Hours</summary>
+    <p>Monday – Friday<br>10:00 AM – 6:00 PM IST</p>
+  </details>
+
+</section>
+<section class="pt-ct-links-section">
+
+    <p class="pt-ct-links__label">
+        Looking for Something Else?
+    </p>
+
+    <div class="pt-ct-links__grid">
+
+        <a href="/pages/our-story" class="pt-ct-quick">
+            Our Story
+        </a>
+
+        <a href="/pages/shipping-returns" class="pt-ct-quick">
+            Shipping & Returns
+        </a>
+
+        <a href="/pages/size-guide" class="pt-ct-quick">
+            Size Guide
+        </a>
+
+        <a href="/pages/faq" class="pt-ct-quick">
+            FAQ
+        </a>
+
+    </div>
+
 </section>
 
 <style>
@@ -158,6 +250,49 @@
   .pt-ct-body{padding:48px 24px}
   .pt-ct-info{grid-template-columns:1fr}
 }
+.pt-ct-business{
+    margin-top:64px;
+}
+
+.pt-ct-collapse{
+    border-bottom:1px solid rgba(18,18,18,.12);
+}
+
+.pt-ct-collapse summary{
+    list-style:none;
+    cursor:pointer;
+    padding:18px 0;
+    font-size:13px;
+    font-family:'DM Sans',sans-serif;
+    font-weight:500;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.pt-ct-collapse summary::-webkit-details-marker{
+    display:none;
+}
+
+.pt-ct-collapse summary::after{
+    content:'›';
+    font-size:18px;
+    transition:transform .25s ease;
+}
+
+
+.pt-ct-collapse[open] summary::after{
+    transform:rotate(90deg);
+}
+
+.pt-ct-collapse p{
+    padding:0 0 20px;
+    margin:0;
+    font-size:13px;
+    line-height:1.8;
+    color:#121212;
+    font-family:'DM Sans',sans-serif;
+}
 </style>
 
 {% schema %}
@@ -167,3 +302,4 @@
   "presets": []
 }
 {% endschema %}
+
