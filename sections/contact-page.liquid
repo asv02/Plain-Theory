@@ -54,14 +54,18 @@
 
   </div>
 </section> {% endcomment %}
-<div class="pt-ct-section-header">
+
+<section class="pt-ct-body">
+
+    <div class="pt-ct-inner">
+      <div class="pt-ct-section-header">
 
     <p class="pt-ct-links__label">
         Contact Information
     </p>
 
     <h2 class="pt-ct-section-title">
-        How you can reach us.
+        Let's start with a conversation.
     </h2>
 
     <p class="pt-ct-section-description">
@@ -103,9 +107,6 @@
 
 </section>
 
-<section class="pt-ct-body">
-
-    <div class="pt-ct-inner">
 <div class="pt-ct-form-wrap">
 
   <p class="pt-ct-form__label">
@@ -305,7 +306,19 @@
 }
 .pt-ct-card{
   background:#F7F5EF;border:1px solid rgba(18,18,18,0.12);
-  border-radius:6px;padding:28px;
+  border-radius:6px;
+  padding:24px;
+  min-height:220px;
+  transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+.pt-ct-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(18,18,18,.28);
+
 }
 .pt-ct-card__title{
   font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
@@ -337,6 +350,7 @@
 .pt-ct-form-wrap{
   border-top:1px solid rgba(18,18,18,0.1);
   padding-top:48px;
+  margin-top:56px;
 }
 .pt-ct-form__label{
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
@@ -359,6 +373,7 @@
   letter-spacing:0.14em!important;text-transform:uppercase!important;
   font-weight:500!important;border:none!important;border-radius:2px!important;
   cursor:pointer!important;font-family:'DM Sans',sans-serif!important;
+  min-width:190px;
 }
 .pt-ct-success,.pt-ct-error{
   font-size:13px;font-family:'DM Sans',sans-serif;margin-bottom:16px;
@@ -427,7 +442,7 @@
 }
 .pt-business{
     max-width:760px;
-    margin:70px auto;
+    margin:56px auto;
 }
 
 .pt-section-label{
