@@ -85,41 +85,79 @@
   </div>
 
 </section>
-<section class="pt-ct-business">
+<section class="pt-business">
 
-  <p class="pt-ct-links__label">Business Information</p>
-
-  <details class="pt-ct-collapse">
-    <summary>Business Name</summary>
-    <p>Plain Thread</p>
-  </details>
-
-  <details class="pt-ct-collapse">
-    <summary>Business Address</summary>
-    <p>
-      309, 3rd Floor, Tower-A of Eleven Bay (SAS Tower)<br>
-      Support Area, Medicity<br>
-      Gurugram, Haryana – 122001
+    <p class="pt-section-label">
+        Business Information
     </p>
-  </details>
 
-  <details class="pt-ct-collapse">
-    <summary>Email</summary>
-    <p>hello@plainthread.in</p>
-  </details>
+    <div class="pt-accordion">
 
-  <details class="pt-ct-collapse">
-    <summary>GSTIN</summary>
-    <p>06ABJFP4213A1ZR</p>
-  </details>
+        <div class="pt-item">
+            <button class="pt-trigger">
+                <span>Business Name</span>
+                <span class="pt-icon">+</span>
+            </button>
 
-  <details class="pt-ct-collapse">
-    <summary>Working Hours</summary>
-    <p>Monday – Friday<br>10:00 AM – 6:00 PM IST</p>
-  </details>
+            <div class="pt-content">
+                <p>Plain Thread</p>
+            </div>
+        </div>
 
-</section>
-<section class="pt-ct-links-section">
+        <div class="pt-item">
+            <button class="pt-trigger">
+                <span>Business Address</span>
+                <span class="pt-icon">+</span>
+            </button>
+
+            <div class="pt-content">
+                <p>
+                    309, 3rd Floor, Tower-A of Eleven Bay (SAS Tower)<br>
+                    Support Area, Medicity<br>
+                    Gurugram, Haryana – 122001
+                </p>
+            </div>
+        </div>
+
+        <div class="pt-item">
+            <button class="pt-trigger">
+                <span>Email</span>
+                <span class="pt-icon">+</span>
+            </button>
+
+            <div class="pt-content">
+                <p>hello@plainthread.in</p>
+            </div>
+        </div>
+
+        <div class="pt-item">
+            <button class="pt-trigger">
+                <span>GSTIN</span>
+                <span class="pt-icon">+</span>
+            </button>
+
+            <div class="pt-content">
+                <p>06ABJFP4213A1ZR</p>
+            </div>
+        </div>
+
+        <div class="pt-item">
+            <button class="pt-trigger">
+                <span>Working Hours</span>
+                <span class="pt-icon">+</span>
+            </button>
+
+            <div class="pt-content">
+                <p>
+                    Monday – Friday<br>
+                    10:00 AM – 6:00 PM IST
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</section><section class="pt-ct-links-section">
 
     <p class="pt-ct-links__label">
         Looking for Something Else?
@@ -305,7 +343,117 @@
 .pt-ct-links-section{
     margin-top:56px;
 }
+.pt-business{
+    max-width:760px;
+    margin:70px auto;
+}
+
+.pt-section-label{
+    font-size:11px;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    margin-bottom:26px;
+    font-family:'DM Sans',sans-serif;
+}
+
+.pt-item{
+    border-top:1px solid rgba(18,18,18,.10);
+}
+
+.pt-item:last-child{
+    border-bottom:1px solid rgba(18,18,18,.10);
+}
+
+.pt-trigger{
+    width:100%;
+    padding:22px 0;
+    background:none;
+    border:none;
+    cursor:pointer;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    font-size:15px;
+    font-family:'DM Sans',sans-serif;
+    color:#121212;
+
+    transition:.3s;
+}
+
+.pt-trigger:hover{
+    color:#555;
+}
+
+.pt-icon{
+    font-size:22px;
+    transition:.35s;
+    font-weight:300;
+}
+
+.pt-content{
+
+    max-height:0;
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.pt-content p{
+
+    margin:0 0 22px;
+
+    font-size:14px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    font-family:'DM Sans',sans-serif;
+
+}
 </style>
+<script>
+
+document.querySelectorAll(".pt-trigger").forEach(button=>{
+
+    button.addEventListener("click",()=>{
+
+        const item=button.parentElement;
+
+        const content=item.querySelector(".pt-content");
+
+        const icon=item.querySelector(".pt-icon");
+
+        const isOpen=item.classList.contains("active");
+
+        document.querySelectorAll(".pt-item").forEach(i=>{
+
+            i.classList.remove("active");
+
+            i.querySelector(".pt-content").style.maxHeight=null;
+
+            i.querySelector(".pt-icon").textContent="+";
+
+        });
+
+        if(!isOpen){
+
+            item.classList.add("active");
+
+            content.style.maxHeight=content.scrollHeight+"px";
+
+            icon.textContent="−";
+
+        }
+
+    });
+
+});
+
+</script>
 
 {% schema %}
 {
