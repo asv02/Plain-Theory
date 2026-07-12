@@ -185,7 +185,7 @@
 }
 .pt-ct-card{
   background:#F7F5EF;border:1px solid rgba(18,18,18,0.12);
-  border-radius:6px;padding:24px;
+  border-radius:6px;padding:28px;
 }
 .pt-ct-card__title{
   font-size:10px;letter-spacing:0.14em;text-transform:uppercase;
@@ -204,6 +204,7 @@
 .pt-ct-links__label{
   font-size:10px;letter-spacing:0.18em;text-transform:uppercase;
   color:#121212;margin-bottom:16px;font-family:'DM Sans',sans-serif;
+  margin-bottom:24px;
 }
 .pt-ct-links__grid{display:flex;flex-wrap:wrap;gap:10px}
 .pt-ct-quick{
@@ -251,7 +252,10 @@
   .pt-ct-info{grid-template-columns:1fr}
 }
 .pt-ct-business{
-    margin-top:64px;
+    max-width:760px;
+    margin:36px auto 0;
+    border-top:1px solid rgba(18,18,18,.08);
+    padding-top:48px;
 }
 
 .pt-ct-collapse{
@@ -261,13 +265,14 @@
 .pt-ct-collapse summary{
     list-style:none;
     cursor:pointer;
-    padding:18px 0;
+    padding:14px 0;
     font-size:13px;
     font-family:'DM Sans',sans-serif;
     font-weight:500;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    transition:.25s;
 }
 
 .pt-ct-collapse summary::-webkit-details-marker{
@@ -292,6 +297,13 @@
     line-height:1.8;
     color:#121212;
     font-family:'DM Sans',sans-serif;
+}
+
+.pt-ct-collapse summary:hover{
+    padding-left:8px;
+}
+.pt-ct-links-section{
+    margin-top:56px;
 }
 </style>
 
