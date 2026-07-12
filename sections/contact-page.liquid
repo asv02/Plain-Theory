@@ -55,10 +55,6 @@
   </div>
 </section> {% endcomment %}
 <section class="pt-ct-info">
-      <p class="pt-ct-links__label">
-        Contact Information
-    </p>
-
   <div class="pt-ct-card">
     <p class="pt-ct-card__title">Email</p>
     <p class="pt-ct-card__body">
@@ -90,6 +86,64 @@
   </div>
 
 </section>
+<div class="pt-ct-form-wrap">
+
+  <p class="pt-ct-form__label">
+      Send a message
+  </p>
+
+  {% form 'contact', id: 'ContactForm' %}
+
+    {%- if form.posted_successfully? -%}
+      <p class="pt-ct-success">
+        Thanks for reaching out. We'll reply within 24 hours.
+      </p>
+    {%- endif -%}
+
+    {%- if form.errors -%}
+      <p class="pt-ct-error">
+        Please check your details and try again.
+      </p>
+    {%- endif -%}
+
+    <div class="pt-ct-fields">
+
+      <input
+        class="pt-ct-input"
+        type="text"
+        name="contact[name]"
+        placeholder="Your name"
+        required
+      >
+
+      <input
+        class="pt-ct-input"
+        type="email"
+        name="contact[email]"
+        placeholder="Your email"
+        required
+      >
+
+      <textarea
+        class="pt-ct-textarea"
+        name="contact[body]"
+        placeholder="Tell us how we can help."
+        rows="5"
+        required
+      ></textarea>
+
+      <button
+        type="submit"
+        class="pt-ct-submit"
+      >
+        Send Message
+      </button>
+
+    </div>
+
+  {% endform %}
+
+</div>
 <section class="pt-business">
 
     <p class="pt-section-label">
