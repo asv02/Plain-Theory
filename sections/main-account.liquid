@@ -14,81 +14,399 @@
   }
 {%- endstyle -%}
 
-<div class="customer account section-{{ section.id }}-padding">
-  <div>
-    <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-    <a href="{{ routes.account_logout_url }}">
+<div class="customer account pt-account section-{{ section.id }}-padding">
+
+  <div class="pt-account-header">
+
+    <div>
+
+      <p class="pt-eyebrow">
+        Plain Thread
+      </p>
+
+      <h1 class="pt-title">
+        Welcome back,
+        {{ customer.first_name | default: 'Member' }}
+      </h1>
+
+      <p class="pt-subtitle">
+        Manage your orders, addresses and account details.
+      </p>
+
+    </div>
+
+    <a
+      class="pt-logout"
+      href="{{ routes.account_logout_url }}"
+    >
+
       <span class="svg-wrapper">
-        {{- 'icon-account.svg' | inline_asset_content -}}
+        {{ 'icon-account.svg' | inline_asset_content }}
       </span>
-      {{ 'customer.log_out' | t }}
+
+      Logout
+
     </a>
+
   </div>
 
-  <div>
-    <div>
-      <h2>{{ 'customer.orders.title' | t }}</h2>
+  <div class="pt-dashboard">
 
-      {% paginate customer.orders by 20 %}
+    <a
+      href="#orders"
+      class="pt-card"
+    >
+
+      <div class="pt-card-icon">
+        📦
+      </div>
+
+      <div>
+
+        <h3>
+          Orders
+        </h3>
+
+        <p>
+
+          {{ customer.orders_count }}
+
+          Total Orders
+
+        </p>
+
+      </div>
+
+    </a>
+
+    <a
+      href="{{ routes.account_addresses_url }}"
+      class="pt-card"
+    >
+
+      <div class="pt-card-icon">
+        📍
+      </div>
+
+      <div>
+
+        <h3>
+          Addresses
+        </h3>
+
+        <p>
+
+          {{ customer.addresses_count }}
+
+          Saved
+
+        </p>
+
+      </div>
+
+    </a>
+
+    <a
+      href="https://orderstat.plainthread.in"
+      target="_blank"
+      class="pt-card"
+    >
+
+      <div class="pt-card-icon">
+        🚚
+      </div>
+
+      <div>
+
+        <h3>
+
+          Track Order
+
+        </h3>
+
+        <p>
+
+          Live Shipment Status
+
+        </p>
+
+      </div>
+
+    </a>
+
+    <a
+      href="/pages/contact"
+      class="pt-card"
+    >
+
+      <div class="pt-card-icon">
+        💬
+      </div>
+
+      <div>
+
+        <h3>
+
+          Support
+
+        </h3>
+
+        <p>
+
+          Need Help?
+
+        </p>
+
+      </div>
+
+    </a>
+
+  </div>
+
+  <div
+    class="pt-orders"
+    id="orders"
+  >
+
+    <div class="pt-section-heading">
+
+      <h2>
+
+        Recent Orders
+
+      </h2>
+
+      <span>
+
+        {{ customer.orders_count }}
+
+        Orders
+
+      </span>
+
+    </div>
+
+    {% paginate customer.orders by 20 %}
         {%- if customer.orders.size > 0 -%}
-          <table role="table" class="order-history">
-            <caption class="visually-hidden">
-              {{ 'customer.orders.title' | t }}
-            </caption>
-            <thead role="rowgroup">
-              <tr role="row">
-                <th id="ColumnOrder" scope="col" role="columnheader">{{ 'customer.orders.order_number' | t }}</th>
-                <th id="ColumnDate" scope="col" role="columnheader">{{ 'customer.orders.date' | t }}</th>
-                <th id="ColumnPayment" scope="col" role="columnheader">{{ 'customer.orders.payment_status' | t }}</th>
-                <th id="ColumnFulfillment" scope="col" role="columnheader">
-                  {{ 'customer.orders.fulfillment_status' | t }}
-                </th>
-                <th id="ColumnTotal" scope="col" role="columnheader">{{ 'customer.orders.total' | t }}</th>
-              </tr>
-            </thead>
-            <tbody role="rowgroup">
-              {%- for order in customer.orders -%}
-                <tr role="row">
-                  <td
-                    id="RowOrder"
-                    role="cell"
-                    headers="ColumnOrder"
-                    data-label="{{ 'customer.orders.order_number' | t }}"
-                  >
-                    <a
-                      href="{{ order.customer_url }}"
-                      aria-label="{{ 'customer.orders.order_number_link' | t: number: order.name }}"
-                    >
-                      {{ order.name }}
-                    </a>
-                  </td>
-                  <td headers="RowOrder ColumnDate" role="cell" data-label="{{ 'customer.orders.date' | t }}">
-                    {{ order.created_at | time_tag: format: 'date' }}
-                  </td>
-                  <td
-                    headers="RowOrder ColumnPayment"
-                    role="cell"
-                    data-label="{{ 'customer.orders.payment_status' | t }}"
-                  >
-                    {{ order.financial_status_label }}
-                  </td>
-                  <td
-                    headers="RowOrder ColumnFulfillment"
-                    role="cell"
-                    data-label="{{ 'customer.orders.fulfillment_status' | t }}"
-                  >
-                    {{ order.fulfillment_status_label }}
-                  </td>
-                  <td headers="RowOrder ColumnTotal" role="cell" data-label="{{ 'customer.orders.total' | t }}">
-                    {{ order.total_net_amount | money_with_currency }}
-                  </td>
-                </tr>
-              {%- endfor -%}
-            </tbody>
-          </table>
-        {%- else -%}
-          <p>{{ 'customer.orders.none' | t }}</p>
-        {%- endif -%}
+
+<div class="pt-order-list">
+
+  {% for order in customer.orders %}
+
+  <article class="pt-order-card">
+
+    <div class="pt-order-top">
+
+      <div>
+
+        <span class="pt-order-label">
+          Order
+        </span>
+
+        <h3>
+          {{ order.name }}
+        </h3>
+
+      </div>
+
+      <div class="pt-order-status">
+
+        <span class="payment-status">
+
+          {{ order.financial_status_label }}
+
+        </span>
+
+        <span class="fulfillment-status">
+
+          {{ order.fulfillment_status_label }}
+
+        </span>
+
+      </div>
+
+    </div>
+
+    <div class="pt-order-meta">
+
+      <div>
+
+        <span>Date</span>
+
+        <strong>
+
+          {{ order.created_at | date: "%d %b %Y" }}
+
+        </strong>
+
+      </div>
+
+      <div>
+
+        <span>Total</span>
+
+        <strong>
+
+          {{ order.total_price | money }}
+
+        </strong>
+
+      </div>
+
+      <div>
+
+        <span>Items</span>
+
+        <strong>
+
+          {{ order.line_items.size }}
+
+        </strong>
+
+      </div>
+
+    </div>
+
+    <div class="pt-order-products">
+
+      {% for line_item in order.line_items limit:2 %}
+
+      <div class="pt-product-row">
+
+        {% if line_item.image %}
+
+        <img
+          src="{{ line_item.image | image_url: width:120 }}"
+          alt="{{ line_item.title }}"
+          loading="lazy"
+        >
+
+        {% endif %}
+
+        <div>
+
+          <h4>
+
+            {{ line_item.product.title }}
+
+          </h4>
+
+          <p>
+
+            Qty {{ line_item.quantity }}
+
+          </p>
+
+          {% unless line_item.variant.title == 'Default Title' %}
+
+          <small>
+
+            {{ line_item.variant.title }}
+
+          </small>
+
+          {% endunless %}
+
+        </div>
+
+      </div>
+
+      {% endfor %}
+
+      {% if order.line_items.size > 2 %}
+
+      <p class="pt-more-items">
+
+        +{{ order.line_items.size | minus:2 }}
+
+        more item(s)
+
+      </p>
+
+      {% endif %}
+
+    </div>
+
+    <div class="pt-order-actions">
+
+      <a
+        href="{{ order.customer_url }}"
+        class="button"
+      >
+
+        View Details
+
+      </a>
+
+      <a
+        href="https://orderstat.plainthread.in"
+        target="_blank"
+        class="button button--secondary"
+      >
+
+        Track Order
+
+      </a>
+
+      {% assign first_item = order.line_items.first %}
+
+      {% if first_item.product %}
+
+      <a
+        href="{{ first_item.product.url }}"
+        class="button button--tertiary"
+      >
+
+        Buy Again
+
+      </a>
+
+      {% endif %}
+
+    </div>
+
+  </article>
+
+  {% endfor %}
+
+</div>
+
+{%- else -%}
+
+<div class="pt-empty-state">
+
+  <div class="pt-empty-icon">
+
+    📦
+
+  </div>
+
+  <h2>
+
+    Your wardrobe starts here
+
+  </h2>
+
+  <p>
+
+    You haven't placed an order yet.
+
+    Explore timeless oversized essentials designed for everyday comfort.
+
+  </p>
+
+  <a
+    href="/collections/all"
+    class="button"
+  >
+
+    Shop Collection
+
+  </a>
+
+</div>
+
+{%- endif -%}
 
         {%- if paginate.pages > 1 -%}
           {%- if paginate.parts.size > 0 -%}
